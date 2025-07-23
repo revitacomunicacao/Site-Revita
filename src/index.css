@@ -1,0 +1,184 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: #1a1a1a;
+  --foreground: #fff;
+  --card: #2d002b;
+  --card-foreground: #fff;
+  --popover: #2d002b;
+  --popover-foreground: #fff;
+  --primary: #660042;
+  --primary-foreground: #fff;
+  --secondary: #FF9025;
+  --secondary-foreground: #1a1a1a;
+  --muted: #2d002b;
+  --muted-foreground: #FF9025;
+  --accent: #FF9025;
+  --accent-foreground: #660042;
+  --destructive: #e63946;
+  --border: #660042;
+  --input: #660042;
+  --ring: #FF9025;
+  --chart-1: #FF9025;
+  --chart-2: #660042;
+  --chart-3: #e0e0e0;
+  --chart-4: #f5f5f5;
+  --chart-5: #fff;
+  --sidebar: #2d002b;
+  --sidebar-foreground: #FF9025;
+  --sidebar-primary: #660042;
+  --sidebar-primary-foreground: #fff;
+  --sidebar-accent: #FF9025;
+  --sidebar-accent-foreground: #fff;
+  --sidebar-border: #660042;
+  --sidebar-ring: #FF9025;
+}
+
+.light {
+  --background: #fff;
+  --foreground: #1a1a1a;
+  --card: #fff;
+  --card-foreground: #1a1a1a;
+  --popover: #fff;
+  --popover-foreground: #1a1a1a;
+  --primary: #660042;
+  --primary-foreground: #fff;
+  --secondary: #FF9025;
+  --secondary-foreground: #fff;
+  --muted: #f5f5f5;
+  --muted-foreground: #660042;
+  --accent: #FF9025;
+  --accent-foreground: #660042;
+  --destructive: #e63946;
+  --border: #e0e0e0;
+  --input: #e0e0e0;
+  --ring: #FF9025;
+  --chart-1: #660042;
+  --chart-2: #FF9025;
+  --chart-3: #e0e0e0;
+  --chart-4: #f5f5f5;
+  --chart-5: #1a1a1a;
+  --sidebar: #fff;
+  --sidebar-foreground: #660042;
+  --sidebar-primary: #660042;
+  --sidebar-primary-foreground: #fff;
+  --sidebar-accent: #FF9025;
+  --sidebar-accent-foreground: #fff;
+  --sidebar-border: #e0e0e0;
+  --sidebar-ring: #FF9025;
+}
+
+.text-gradient-hover {
+  color: #fff;
+  transition:
+    color 0.3s,
+    background 0.6s,
+    -webkit-text-fill-color 0.6s;
+}
+
+.text-gradient-hover:hover {
+  background: linear-gradient(90deg, #660042, #FF9025, #660042);
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-move 2.5s linear infinite;
+  transition:
+    color 0.3s,
+    background 0.6s,
+    -webkit-text-fill-color 0.6s;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Garante que o background dos itens do menu nunca mude no hover/focus/active */
+.text-gradient-hover,
+.text-gradient-hover:hover,
+.text-gradient-hover:focus,
+.text-gradient-hover:active {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Para NavigationMenuTrigger especificamente */
+.NavigationMenuTrigger,
+.NavigationMenuTrigger:hover,
+.NavigationMenuTrigger:focus,
+.NavigationMenuTrigger:active {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+@keyframes slide-in-right {
+  0% { opacity: 0; transform: translateX(80px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+.animate-slide-in-right { animation: slide-in-right 1.2s cubic-bezier(.4,0,.2,1) both; }
+
+@keyframes slide-in-left {
+  0% { opacity: 0; transform: translateX(-80px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+.animate-slide-in-left { animation: slide-in-left 1.2s cubic-bezier(.4,0,.2,1) both; }
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    font-family: 'Poppins', sans-serif;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+}
