@@ -3,6 +3,7 @@ import { Institutional } from "./home/components/Institucional"
 import { Banner } from "./home/components/Banner"
 import { Servicos } from "./home/components/Servicos"
 import { Portfolio } from "./home/components/Portfolio"
+import { LogoCarousel } from "./home/components/LogoCarousel"
 
 export default function HomePage() {
   useSeo({
@@ -15,6 +16,7 @@ export default function HomePage() {
       <Institutional />
       <Servicos />
       <Portfolio />
+      <LogoCarousel />
     </main>
   )
 }

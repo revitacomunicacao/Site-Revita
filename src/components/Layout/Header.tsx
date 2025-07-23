@@ -75,7 +75,7 @@ export const Header = () => {
             ${showNav ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'}
           `}
           style={{
-            background: 'linear-gradient(10deg, #660042 0%, #0e0e0e 100%)',
+            background: 'linear-gradient(180deg, #0e0e0e 0%, #660042 100%)',
             boxShadow: 'none',
           }}
         >

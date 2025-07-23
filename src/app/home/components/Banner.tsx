@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import modeloSelos from "@/assets/Modelo-Selos.png";
+import backgroundVideo from "@/assets/video-luzes-vertical.mp4";
 
 const slides = [
   {
@@ -7,21 +8,18 @@ const slides = [
     title: "Marketing Digital com Resultados Reais",
     desc: "Impulsione sua presença online com estratégias inteligentes, criativas e personalizadas. Somos especialistas em transformar negócios em marcas de sucesso.",
     cta: "Fale com um especialista",
-    bg: "bg-gradient-to-l from-[#660042] via-[#2d002b] to-[#0e0e0e]",
   },
   {
     miniTitle: "Tecnologia & Performance",
     title: "Soluções Digitais para Crescer",
     desc: "Utilizamos tecnologia de ponta e análise de dados para gerar crescimento sustentável e resultados mensuráveis para sua empresa.",
     cta: "Solicite um diagnóstico",
-    bg: "bg-gradient-to-l from-[#FF9025] via-[#660042] to-[#0e0e0e]",
   },
   {
     miniTitle: "Confiança & Credibilidade",
     title: "Sua Agência Parceira de Verdade",
-    desc: "Mais que uma agência, somos parceiros do seu negócio. Conte com uma equipe experiente, transparente e focada no seu sucesso.",
+    desc: "Transformamos clínicas em marcas admiradas no setor, preferidas pelos pacientes e reconhecidas pela excelência. Mais que uma agência, somos parceiros do seu negócio.",
     cta: "Conheça nossos cases",
-    bg: "bg-gradient-to-l from-[#0e0e0e] via-[#660042] to-[#FF9025]",
   },
 ];
 
@@ -59,16 +57,19 @@ export const Banner = () => {
 
   return (
     <section className="w-full h-[540px] flex items-center justify-center relative overflow-hidden select-none">
-      {/* Fundo com fade */}
-      <div className="absolute inset-0 w-full h-full z-0">
-        {slides.map((slide, idx) => (
-          <div
-            key={idx}
-            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${slide.bg} ${current === idx ? 'opacity-100' : 'opacity-0'}`}
-            style={{ transitionProperty: 'opacity' }}
-          />
-        ))}
-      </div>
+      {/* Vídeo de fundo fixo */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        src={backgroundVideo}
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+      
+      {/* Overlay escuro sobre o vídeo */}
+      <div className="absolute inset-0 bg-black/50" />
+
       {/* Conteúdo animado */}
       <div className="w-full h-full relative z-10 flex items-center justify-center">
         {slides.map((slide, idx) => {
@@ -80,7 +81,18 @@ export const Banner = () => {
                 ${direction === "right" ? "animate-slide-in-right" : "animate-slide-in-left"}
               `}>
                 <span className="uppercase tracking-widest text-sm font-semibold text-[#FF9025] animate-fade-in-down" style={{ letterSpacing: 2 }}>{slide.miniTitle}</span>
-                <h1 className="text-4xl md:text-6xl font-bold text-white animate-fade-in-left" style={{ lineHeight: 1.1 }}>{slide.title}</h1>
+                                 <h1 className="text-4xl md:text-6xl font-bold text-white animate-fade-in-left" style={{ lineHeight: 1.1 }}>
+                   {slide.title.split(' ').map((word, index) => {
+                     if (word.includes('Marketing') || word.includes('Soluções') || word.includes('Agência')) {
+                       return (
+                         <span key={index} className="shimmer-gradient">
+                           {word}{' '}
+                         </span>
+                       );
+                     }
+                     return word + ' ';
+                   })}
+                 </h1>
                 <p className="text-lg md:text-xl text-white/80 max-w-xl animate-fade-in-left">{slide.desc}</p>
                 <button className="mt-2 px-6 py-2 rounded-full bg-[#FF9025] text-[#660042] font-bold text-base shadow-lg hover:bg-[#fff] hover:text-[#FF9025] transition-all duration-300 animate-fade-in-up">
                   {slide.cta}
@@ -101,6 +113,7 @@ export const Banner = () => {
           );
         })}
       </div>
+      
       {/* Setas */}
       <button
         onClick={prev}
@@ -116,6 +129,7 @@ export const Banner = () => {
       >
         <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
       </button>
+      
       {/* Indicadores */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-30">
         {slides.map((_, idx) => (
@@ -126,8 +140,6 @@ export const Banner = () => {
           />
         ))}
       </div>
-      {/* Overlay */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10" />
     </section>
   );
 };
