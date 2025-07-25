@@ -1,237 +1,132 @@
-# Template Web Revita - Site Institucional
+# Revita Comunicação - Site Institucional
 
-Um template moderno e otimizado para desenvolvimento rápido de sites institucionais, construído com React, TypeScript e Vite.
+Site institucional da Revita Comunicação, desenvolvido com React, TypeScript e Tailwind CSS.
 
-> **🚀 Comece rapidamente:** `npx create-web-revita`
+## 🚀 Deploy
 
-## 🚀 Características
+Este projeto está configurado para ser hospedado em:
+**https://companhiadamidia.com.br/desenvolvimento/revita/**
 
-- ⚡ **Vite** - Build tool ultra-rápido
-- ⚛️ **React 19** - Framework moderno com Hooks
-- 📝 **TypeScript** - Tipagem estática para melhor desenvolvimento
-- 🛣️ **React Router DOM** - Roteamento client-side
-- 📄 **File-based Routing** - Roteamento baseado em arquivos (estilo Next.js)
-- 🔍 **SEO Otimizado** - Hook personalizado para meta tags
-- 📱 **Responsivo** - Layout adaptável para todos os dispositivos
-- 🧹 **ESLint** - Linting configurado para qualidade de código
+### Configurações Aplicadas
 
-## 📦 Instalação
+1. **Base Path**: Configurado no `vite.config.ts` como `/desenvolvimento/revita/`
+2. **React Router**: Configurado com `basename="/desenvolvimento/revita"`
+3. **Links**: Todos os links internos usam `Link` do React Router
+4. **HTAccess**: Configurado para SPA routing no Apache
+
+### Build para Produção
 
 ```bash
-# Crie um novo projeto usando o template
-npx create-web-revita
-
-# Siga as instruções no terminal
-# O template será baixado e configurado automaticamente
-
-# Entre no diretório criado
-cd seu-projeto
-
-#Baixe as dependencias
-npm install
-
-# Inicie o servidor de desenvolvimento
-npm run dev
+npm run build
 ```
 
-## 🏗️ Estrutura do Projeto
+O build será gerado na pasta `dist/` e deve ser enviado para:
+`/desenvolvimento/revita/` no servidor
+
+### Estrutura de Arquivos no Servidor
+
+```
+/desenvolvimento/revita/
+├── index.html
+├── assets/
+│   ├── css/
+│   ├── js/
+│   └── images/
+└── .htaccess
+```
+
+## 🛠️ Desenvolvimento
+
+```bash
+# Instalar dependências
+npm install
+
+# Rodar em desenvolvimento
+npm run dev
+
+# Build para produção
+npm run build
+
+# Preview do build
+npm run preview
+```
+
+## 📱 Responsivo
+
+O site é totalmente responsivo e otimizado para:
+- 📱 Mobile (320px+)
+- 📱 Tablet (768px+)
+- 💻 Desktop (1024px+)
+- 🖥️ Large Desktop (1280px+)
+
+## 🎨 Tecnologias
+
+- **React 19** - Framework principal
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Estilização
+- **React Router** - Roteamento
+- **Radix UI** - Componentes acessíveis
+- **Lucide React** - Ícones
+- **React Icons** - Biblioteca de ícones
+- **Vite** - Build tool
+
+## 📁 Estrutura do Projeto
 
 ```
 src/
-├── app/                    # Páginas da aplicação
-│   ├── index.tsx          # Página inicial
-│   ├── about/
-│   │   └── index.tsx      # Página "Sobre Nós"
-│   └── produtos/
-│       └── [slug]/
-│           └── index.tsx  # Página dinâmica de produtos
+├── app/
+│   ├── home/
+│   │   ├── components/
+│   │   │   ├── Banner.tsx
+│   │   │   ├── Institucional.tsx
+│   │   │   ├── LogoCarousel.tsx
+│   │   │   ├── Portfolio.tsx
+│   │   │   └── Servicos.tsx
+│   │   └── index.tsx
+├── components/
+│   ├── Layout/
+│   │   ├── Header.tsx
+│   │   └── Footer.tsx
+│   ├── ui/
+│   └── AnimatedElement.tsx
+├── assets/
 ├── hooks/
-│   └── useSeo.ts          # Hook para SEO
-├── main.tsx               # Ponto de entrada
-└── index.css              # Estilos globais
+└── lib/
 ```
 
-## 🎯 Como Usar
+## 🎯 Funcionalidades
 
-### 1. Páginas Estáticas
+- ✅ Header responsivo com menu mobile
+- ✅ Banner com carrossel de slides
+- ✅ Seções institucionais
+- ✅ Carrossel de clientes
+- ✅ Portfolio
+- ✅ Serviços
+- ✅ Footer completo
+- ✅ Animações suaves
+- ✅ SEO otimizado
+- ✅ Performance otimizada
 
-Crie páginas simples adicionando arquivos `index.tsx` em pastas dentro de `src/app/`:
+## 🔧 Configurações Especiais
 
-```tsx
-// src/app/contato/index.tsx
-import useSeo from "@/hooks/useSeo"
+### Base Path
+O projeto está configurado para funcionar em subdiretório:
+- Vite: `base: '/desenvolvimento/revita/'`
+- React Router: `basename="/desenvolvimento/revita"`
 
-export default function ContactPage() {
-  useSeo({
-    title: "Contato",
-    description: "Entre em contato conosco",
-    image: "/og-image.jpg"
-  })
-  
-  return (
-    <main>
-      <h1>Contato</h1>
-      <p>Formulário de contato aqui...</p>
-    </main>
-  )
-}
-```
+### Roteamento SPA
+O arquivo `.htaccess` está configurado para:
+- Redirecionar todas as rotas para `index.html`
+- Cache de assets estáticos
+- Compressão Gzip
 
-### 2. Páginas Dinâmicas
+## 📞 Contato
 
-Para páginas com parâmetros dinâmicos, use colchetes no nome da pasta:
-
-```tsx
-// src/app/blog/[id]/index.tsx
-import useSeo from "@/hooks/useSeo"
-import { useParams } from 'react-router-dom'
-
-export default function BlogPost() {
-  const { id } = useParams<{ id: string }>()
-  
-  useSeo({
-    title: `Post ${id}`,
-    description: `Leia o post ${id}`,
-    image: "/blog-image.jpg"
-  })
-  
-  return (
-    <main>
-      <h1>Post {id}</h1>
-      <p>Conteúdo do post...</p>
-    </main>
-  )
-}
-```
-
-### 3. SEO Otimizado
-
-Use o hook `useSeo` em todas as páginas para configurar meta tags:
-
-```tsx
-useSeo({
-  title: "Título da Página",
-  description: "Descrição para SEO",
-  image: "https://exemplo.com/og-image.jpg",
-  icon: "https://exemplo.com/favicon.ico",
-  "og:type": "website",
-  "twitter:card": "summary_large_image"
-})
-```
-
-## 🛠️ Scripts Disponíveis
-
-```bash
-# Desenvolvimento
-npm run dev          # Inicia servidor de desenvolvimento
-
-# Build
-npm run build        # Gera build de produção
-
-# Preview
-npm run preview      # Visualiza build de produção
-
-# Linting
-npm run lint         # Executa ESLint
-```
-
-## 🎨 Personalização
-
-### 1. Estilos Globais
-
-Edite `src/index.css` para personalizar estilos globais:
-
-```css
-:root {
-  --primary-color: #007bff;
-  --secondary-color: #6c757d;
-  --font-family: 'Arial', sans-serif;
-}
-
-body {
-  font-family: var(--font-family);
-  margin: 0;
-  padding: 0;
-}
-```
-
-### 2. Configuração do Vite
-
-Modifique `vite.config.ts` para adicionar plugins ou configurar aliases:
-
-```ts
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import Pages from 'vite-plugin-pages'
-
-export default defineConfig({
-  plugins: [react(), Pages()],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, 'src'),
-      '@components': path.resolve(__dirname, 'src/components'),
-    },
-  },
-})
-```
-
-## 📱 Deploy
-
-### Vercel (Recomendado)
-
-1. Conecte seu repositório ao Vercel
-2. Configure o build command: `npm run build`
-3. Configure o output directory: `dist`
-4. Deploy automático a cada push
-
-### Netlify
-
-1. Conecte seu repositório ao Netlify
-2. Configure o build command: `npm run build`
-3. Configure o publish directory: `dist`
-
-### GitHub Pages
-
-```bash
-# Adicione o script de deploy no package.json
-"deploy": "npm run build && gh-pages -d dist"
-
-# Instale gh-pages
-npm install --save-dev gh-pages
-
-# Deploy
-npm run deploy
-```
-
-## 🔧 Tecnologias
-
-- **React 19** - Framework JavaScript
-- **TypeScript** - Superset JavaScript com tipagem
-- **Vite** - Build tool e dev server
-- **React Router DOM** - Roteamento
-- **vite-plugin-pages** - File-based routing
-- **ESLint** - Linting de código
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-## 🤝 Contribuição
-
-Contribuições são bem-vindas! Por favor, leia as [diretrizes de contribuição](CONTRIBUTING.md) antes de submeter um pull request.
-
-## 📞 Suporte
-
-Se você encontrar algum problema ou tiver dúvidas, abra uma [issue](https://github.com/seu-usuario/template-web-revita/issues) no GitHub ou entre em contato através do npm.
-
-## 📦 Publicado no NPM
-
-Este template está disponível no NPM como `create-web-revita`. Para usar, simplesmente execute:
-
-```bash
-npx create-web-revita
-```
+**Revita Comunicação**
+- Email: contato@revitacomunicacao.com.br
+- Telefone: (34) 99710-0854
+- Localização: Uberlândia - MG
 
 ---
 
-**Desenvolvido com ❤️ para facilitar o desenvolvimento de sites institucionais**
+Desenvolvido por **Revita Comunicação** 🚀

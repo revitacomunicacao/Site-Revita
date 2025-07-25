@@ -1,4 +1,4 @@
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, Menu } from "lucide-react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaPlay, FaRocket, FaWhatsapp } from "react-icons/fa";
 import {
   NavigationMenu,
@@ -14,6 +14,16 @@ import { IoDesktop } from "react-icons/io5";
 import logo from "@/assets/logoRevitaComunicação.png"
 import { HiOutlineChatBubbleOvalLeftEllipsis } from "react-icons/hi2";
 import { useEffect, useRef, useState } from "react";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+  SheetClose,
+} from "@/components/ui/sheet";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const [showNav, setShowNav] = useState(true);
@@ -81,9 +91,9 @@ export const Header = () => {
         >
           <div className="flex flex-row justify-center items-center py-4 gap-15 max-w-6xl mx-auto w-full">
             <div className="flex-shrink-0">
-              <a href="/">
+              <Link to="/">
                 <img src={logo} alt="logo" />
-              </a>
+              </Link>
             </div>
             <nav className="flex-1">
               <NavigationMenu viewport={false} >
@@ -91,7 +101,7 @@ export const Header = () => {
 
                   <NavigationMenuItem>
                     <NavigationMenuLink asChild className="text-[18px] text-gradient-hover whitespace-nowrap">
-                      <a href="/agencia">A Agencia</a>
+                      <Link to="/agencia">A Agencia</Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
 
@@ -100,31 +110,31 @@ export const Header = () => {
                     <NavigationMenuContent className="p-0 border-none ">
                       <div className="flex flex-col gap-3 bg-[#29003c] w-[300px] p-2 rounded-1xl">
                         <div>
-                          <a href="#" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer"> <HiSpeakerphone className="text-purple-700" /> Marketing</a>
+                          <Link to="#" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer"> <HiSpeakerphone className="text-purple-700" /> Marketing</Link>
                         </div>
-                        <a href="#" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer"> <FaBoltLightning className="text-yellow-500" /> Perfomace</a>
-                        <a href="#" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer"> <FaPlay className="text-cyan-600" /> Programatica</a>
-                        <a href="#" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer"><IoDesktop className="text-green-700" /> Projetos</a>
-                        <a href="#" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer"><FaRocket className="not-placeholder-shown:text-amber-700" /> Seo</a>
+                        <Link to="#" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer"> <FaBoltLightning className="text-yellow-500" /> Perfomace</Link>
+                        <Link to="#" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer"> <FaPlay className="text-cyan-600" /> Programatica</Link>
+                        <Link to="#" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer"><IoDesktop className="text-green-700" /> Projetos</Link>
+                        <Link to="#" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer"><FaRocket className="not-placeholder-shown:text-amber-700" /> Seo</Link>
                       </div>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
                     <NavigationMenuLink asChild className="text-[18px] text-gradient-hover">
-                      <a href="/portfolio">Portfolio</a>
+                      <Link to="/portfolio">Portfolio</Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
                     <NavigationMenuLink asChild className="text-[18px] text-gradient-hover">
-                      <a href="/contato">Contato</a>
+                      <Link to="/contato">Contato</Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
                     <NavigationMenuLink asChild className="text-[18px] text-gradient-hover">
-                      <a href="/blog">Blog</a>
+                      <Link to="/blog">Blog</Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
 
@@ -142,10 +152,163 @@ export const Header = () => {
       </div>
 
       {/* HEADER MOBILE */}
-      <div>
+      <div className="sm:hidden">
+        {/* Header Mobile Fixo */}
+        <div
+          className={`w-full z-40 transition-all duration-500 ease-in-out fixed top-0
+            ${showNav ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'}
+          `}
+          style={{
+            background: 'linear-gradient(180deg, #0e0e0e 0%, #660042 100%)',
+            boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)',
+          }}
+        >
+          <div className="flex items-center justify-between px-4 py-4">
+            {/* Logo */}
+            <div className="flex-shrink-0">
+              <Link to="/">
+                <img src={logo} alt="logo" className="h-12 w-auto" />
+              </Link>
+            </div>
 
+            {/* Menu Hambúrguer */}
+            <Sheet>
+              <SheetTrigger asChild>
+                <button className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors duration-200">
+                  <Menu className="h-6 w-6 text-white" />
+                </button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] bg-[#0e0e0e] border-l border-[#660042]">
+                <SheetHeader className="border-b border-[#660042] pb-4">
+                  <SheetTitle className="text-white text-left">
+                    <img src={logo} alt="logo" className="h-8 w-auto" />
+                  </SheetTitle>
+                </SheetHeader>
+
+                {/* Menu de Navegação */}
+                <ScrollArea className="h-[calc(100vh-120px)]">
+                  <div className="flex flex-col space-y-6 mt-6 px-4 pb-6">
+                  {/* Links Principais */}
+                  <div className="space-y-4">
+                    <h3 className="text-[#FF9025] font-semibold text-sm uppercase tracking-wider">Menu</h3>
+                    <div className="space-y-3">
+                      <SheetClose asChild>
+                        <Link to="/agencia" className="block text-white hover:text-[#FF9025] transition-colors duration-200 py-2 text-lg">
+                          A Agência
+                        </Link>
+                      </SheetClose>
+                      <SheetClose asChild>
+                        <Link to="/portfolio" className="block text-white hover:text-[#FF9025] transition-colors duration-200 py-2 text-lg">
+                          Portfolio
+                        </Link>
+                      </SheetClose>
+                      <SheetClose asChild>
+                        <Link to="/contato" className="block text-white hover:text-[#FF9025] transition-colors duration-200 py-2 text-lg">
+                          Contato
+                        </Link>
+                      </SheetClose>
+                      <SheetClose asChild>
+                        <Link to="/blog" className="block text-white hover:text-[#FF9025] transition-colors duration-200 py-2 text-lg">
+                          Blog
+                        </Link>
+                      </SheetClose>
+                    </div>
+                  </div>
+
+                  {/* Serviços */}
+                  <div className="space-y-4">
+                    <h3 className="text-[#FF9025] font-semibold text-sm uppercase tracking-wider">Serviços</h3>
+                    <div className="space-y-3">
+                      <SheetClose asChild>
+                        <Link to="#" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                          <HiSpeakerphone className="text-purple-700 text-lg" />
+                          <span>Marketing</span>
+                        </Link>
+                      </SheetClose>
+                      <SheetClose asChild>
+                        <Link to="#" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                          <FaBoltLightning className="text-yellow-500 text-lg" />
+                          <span>Performance</span>
+                        </Link>
+                      </SheetClose>
+                      <SheetClose asChild>
+                        <Link to="#" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                          <FaPlay className="text-cyan-600 text-lg" />
+                          <span>Programática</span>
+                        </Link>
+                      </SheetClose>
+                      <SheetClose asChild>
+                        <Link to="#" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                          <IoDesktop className="text-green-700 text-lg" />
+                          <span>Projetos</span>
+                        </Link>
+                      </SheetClose>
+                      <SheetClose asChild>
+                        <Link to="#" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                          <FaRocket className="text-amber-700 text-lg" />
+                          <span>SEO</span>
+                        </Link>
+                      </SheetClose>
+                    </div>
+                  </div>
+
+                  {/* Contato */}
+                  <div className="space-y-4">
+                    <h3 className="text-[#FF9025] font-semibold text-sm uppercase tracking-wider">Contato</h3>
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3 text-white">
+                        <Mail className="text-[#FF9025] text-lg" />
+                        <span className="text-sm">contato@revitacomunicacao.com.br</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-white">
+                        <Phone className="text-[#FF9025] text-lg" />
+                        <span className="text-sm">(34) 997100854</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-white">
+                        <Phone className="text-[#FF9025] text-lg" />
+                        <span className="text-sm">(34) 997100854</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Redes Sociais */}
+                  <div className="space-y-4">
+                    <h3 className="text-[#FF9025] font-semibold text-sm uppercase tracking-wider">Redes Sociais</h3>
+                    <div className="flex gap-4">
+                      <a href="#" className="text-white hover:text-[#FF9025] transition-colors duration-200">
+                        <FaInstagram className="text-2xl" />
+                      </a>
+                      <a href="#" className="text-white hover:text-[#FF9025] transition-colors duration-200">
+                        <FaFacebook className="text-2xl" />
+                      </a>
+                      <a href="#" className="text-white hover:text-[#FF9025] transition-colors duration-200">
+                        <FaLinkedin className="text-2xl" />
+                      </a>
+                      <a href="#" className="text-white hover:text-[#FF9025] transition-colors duration-200">
+                        <FaWhatsapp className="text-2xl" />
+                      </a>
+                    </div>
+                  </div>
+
+                                     {/* Botão CTA */}
+                   <div className="pt-4 border-t border-[#660042]">
+                     <SheetClose asChild>
+                       <button className="w-full rounded-full bg-[#FF9025] text-[#660042] font-bold py-3 px-6 flex items-center justify-center gap-2 hover:bg-white hover:text-[#FF9025] transition-all duration-300">
+                         Fale Conosco
+                         <HiOutlineChatBubbleOvalLeftEllipsis size={20} />
+                       </button>
+                     </SheetClose>
+                   </div>
+                 </div>
+               </ScrollArea>
+              </SheetContent>
+            </Sheet>
+          </div>
+        </div>
+
+        {/* Espaçador para o conteúdo não ficar sob o header fixo */}
+        <div className="h-20"></div>
       </div>
-
     </header>
   );
 };
