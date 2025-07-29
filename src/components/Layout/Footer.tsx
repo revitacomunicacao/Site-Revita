@@ -24,13 +24,13 @@ export const Footer = () => {
                 Transformamos marcas através de estratégias inovadoras e 
                 soluções personalizadas.
               </p>
-              <div className="flex flex-row gap-2 mb-6">
+              <div className="flex flex-row gap-2 mb-6 items-center">
                 <div className="w-8 h-8 sm:w-10 sm:h-10">
                   <img src={iconRevita} alt="Revita Comunicação" className="w-full h-full object-contain" />
                 </div>
                 <div>
                   <p className="text-white/70 text-sm leading-relaxed">
-                    Desenvolvido por <span className="text-secondary">Revita Comunicação</span>
+                    Desenvolvido por <br /> <span className="text-secondary">Revita Comunicação</span>
                   </p>
                 </div>
               </div>

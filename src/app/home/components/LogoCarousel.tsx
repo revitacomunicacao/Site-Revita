@@ -32,7 +32,8 @@ export const LogoCarousel = () => {
         </AnimatedElement>
         <AnimatedElement animation="slide-up" delay={300}>
           <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-[90px] leading-tight sm:leading-snug text-white font-bold text-center md:text-left">
-            Nossos <br className="sm:hidden" />
+            Nossos
+            <br />
             <span className="shimmer-gradient">
               Clientes
             </span>

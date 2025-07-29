@@ -4,26 +4,26 @@ import backgroundVideo from "@/assets/video-luzes-vertical.mp4";
 
 const slides = [
   {
-    miniTitle: "Sua Marca em Primeiro Lugar",
-    title: "Marketing Digital com Resultados Reais",
-    desc: "Impulsione sua presença online com estratégias inteligentes, criativas e personalizadas. Somos especialistas em transformar negócios em marcas de sucesso.",
+    miniTitle: "Especialistas em Clínicas Médicas",
+    title: "Marketing Digital para Clínicas que Converte",
+    desc: "Transformamos clínicas médicas em referências no setor. Estratégias especializadas que aumentam a confiança dos pacientes e geram mais consultas qualificadas.",
     cta: "Fale com um especialista",
   },
   {
-    miniTitle: "Tecnologia & Performance",
-    title: "Soluções Digitais para Crescer",
-    desc: "Utilizamos tecnologia de ponta e análise de dados para gerar crescimento sustentável e resultados mensuráveis para sua empresa.",
+    miniTitle: "Resultados Comprovados",
+    title: "Soluções Digitais para Clínicas",
+    desc: "Utilizamos tecnologia avançada e análise de dados para gerar crescimento sustentável e resultados mensuráveis para sua clínica médica.",
     cta: "Solicite um diagnóstico",
   },
   {
     miniTitle: "Confiança & Credibilidade",
-    title: "Sua Agência Parceira de Verdade",
-    desc: "Transformamos clínicas em marcas admiradas no setor, preferidas pelos pacientes e reconhecidas pela excelência. Mais que uma agência, somos parceiros do seu negócio.",
+    title: "Sua Clínica em Primeiro Lugar",
+    desc: "Transformamos Clínicas Médicas em marcas admiradas no setor, preferidas pelos pacientes e reconhecidas pela excelência. Mais que uma agência, somos parceiros do seu negócio.",
     cta: "Conheça nossos cases",
   },
 ];
 
-const AUTOPLAY_INTERVAL = 6000;
+const AUTOPLAY_INTERVAL = 10000;
 
 export const Banner = () => {
   const [current, setCurrent] = useState(0);

@@ -6,51 +6,51 @@ import backgroundImage from "@/assets/background-nossas-soluções.png";
 
 const services = [
   { 
-    name: "Branding", 
+    name: "Branding Médico", 
     icon: <FaPalette />, 
-    desc: "Construção e gestão de marcas memoráveis com identidade visual única, posicionamento estratégico e experiência completa do cliente.",
-    features: ["Identidade Visual", "Posicionamento", "Experiência do Cliente"]
+    desc: "Construção de identidade visual profissional para clínicas médicas, criando confiança e credibilidade junto aos pacientes.",
+    features: ["Identidade Visual", "Credibilidade", "Confiança"]
   },
   { 
-    name: "Publicidade", 
+    name: "Publicidade Médica", 
     icon: <FaBullhorn />, 
-    desc: "Campanhas criativas e estratégicas que conectam sua marca ao público certo, maximizando ROI e gerando conversões reais.",
-    features: ["Campanhas Criativas", "Segmentação", "ROI Otimizado"]
+    desc: "Campanhas especializadas para o setor médico que conectam sua clínica aos pacientes certos, respeitando regulamentações.",
+    features: ["Campanhas Especializadas", "Segmentação", "Compliance"]
   },
   { 
-    name: "Mídias sociais", 
+    name: "Redes Sociais", 
     icon: <FaGlobe />, 
-    desc: "Gestão completa e performance nas redes sociais com estratégias personalizadas para cada plataforma e engajamento real.",
-    features: ["Gestão Completa", "Estratégias Personalizadas", "Engajamento Real"]
+    desc: "Gestão estratégica das redes sociais para clínicas, criando engajamento e autoridade médica de forma ética.",
+    features: ["Gestão Estratégica", "Autoridade Médica", "Engajamento"]
   },
   { 
-    name: "Sites", 
+    name: "Sites Médicos", 
     icon: <FaRocket />, 
-    desc: "Criação de sites modernos, responsivos e otimizados para conversão, com foco em experiência do usuário e performance.",
-    features: ["Sites Modernos", "Responsivos", "Otimizados para Conversão"]
+    desc: "Criação de sites profissionais para clínicas médicas, otimizados para conversão e credibilidade no setor.",
+    features: ["Sites Profissionais", "Credibilidade", "Conversão"]
   },
   { 
-    name: "Tráfego pago", 
+    name: "Tráfego Pago", 
     icon: <FaChartLine />, 
-    desc: "Gestão especializada de anúncios para resultados mensuráveis, com otimização contínua e estratégias de remarketing.",
-    features: ["Gestão Especializada", "Resultados Mensuráveis", "Remarketing"]
+    desc: "Gestão especializada de anúncios para clínicas médicas, focando em pacientes qualificados e ROI mensurável.",
+    features: ["Pacientes Qualificados", "ROI Mensurável", "Segmentação"]
   },
   { 
-    name: "SEO", 
+    name: "SEO Médico", 
     icon: <FaSearch />, 
-    desc: "Otimização completa para mecanismos de busca com estratégias técnicas e de conteúdo para aumentar visibilidade orgânica.",
-    features: ["SEO Técnico", "SEO de Conteúdo", "Visibilidade Orgânica"]
+    desc: "Otimização para mecanismos de busca especializada em termos médicos, aumentando a visibilidade da sua clínica.",
+    features: ["SEO Médico", "Visibilidade", "Autoridade"]
   },
   { 
-    name: "Conteúdo", 
+    name: "Conteúdo Médico", 
     icon: <FaPenNib />, 
-    desc: "Produção de conteúdo relevante, estratégico e otimizado para SEO, criando autoridade e gerando leads qualificados.",
-    features: ["Conteúdo Relevante", "Otimizado para SEO", "Geração de Leads"]
+    desc: "Produção de conteúdo educativo e relevante para pacientes, criando autoridade médica e gerando confiança.",
+    features: ["Conteúdo Educativo", "Autoridade", "Confiança"]
   },
   { 
-    name: "Inbound Mkt", 
+    name: "Inbound Médico", 
     icon: <FaMagnet />, 
-    desc: "Estratégias completas de inbound marketing para atrair, converter e fidelizar clientes através de conteúdo de valor.",
+    desc: "Estratégias de inbound marketing para atrair, converter e fidelizar pacientes através de conteúdo de valor.",
     features: ["Atração", "Conversão", "Fidelização"]
   },
 ];
@@ -85,7 +85,7 @@ export const Servicos = () => {
           </AnimatedElement>
           <AnimatedElement animation="slide-up" delay={400}>
             <p className="text-white/90 text-lg max-w-2xl text-center">
-              Soluções completas para impulsionar sua marca no universo digital. Estratégia, criatividade e tecnologia para resultados reais.
+              Soluções completas para impulsionar sua clínica médica no universo digital. Estratégia, criatividade e tecnologia para gerar mais pacientes e confiança.
             </p>
           </AnimatedElement>
         </AnimatedElement>

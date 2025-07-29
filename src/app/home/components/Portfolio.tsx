@@ -8,12 +8,12 @@ import Trofeu from "@/assets/trofeu.svg";
 import { AnimatedElement } from "@/components/AnimatedElement";
 
 const portfolioData = Array.from({ length: 6 }).map(() => ({
-  name: "Choperia Colorado",
-  site: "https://choperiacolorado.com.br/",
+  name: "Clínica CardioVida",
+  site: "https://clinicacardiovida.com.br/",
   logo: logoColorado,
   bg: portfolioImg,
-  desc: "A Choperia Colorado é referência em qualidade e tradição, oferecendo experiências únicas para seus clientes. Desenvolvemos soluções digitais completas para potencializar sua presença online.",
-  tags: ["Site", "Conteúdo", "SEO", "Branding", "Mídias sociais"],
+  desc: "Clínica especializada em cardiologia que se tornou referência na região. Desenvolvemos estratégias digitais completas para aumentar a confiança dos pacientes e gerar mais consultas.",
+  tags: ["Site Médico", "SEO Médico", "Branding", "Redes Sociais", "Tráfego Pago"],
 }));
 
 export const Portfolio = () => {
@@ -28,9 +28,9 @@ export const Portfolio = () => {
         </AnimatedElement>
         <AnimatedElement animation="slide-up" delay={300}>
           <h1 className="text-3xl sm:text-5xl md:text-[90px] leading-snug text-white font-bold text-center md:text-left">
-            Nosso <br />
+            Casos de <br />
             <span className="shimmer-gradient">
-              Portfólio
+              Sucesso
             </span>
           </h1>
         </AnimatedElement>

@@ -6,13 +6,13 @@ export const Institutional = () => {
   const stats = [
     {
       icon: FaUsers,
-      number: "150+",
-      label: "Clientes Atendidos"
+      number: "50+",
+      label: "Clínicas Atendidas"
     },
     {
       icon: FaChartLine,
-      number: "300%",
-      label: "Crescimento Médio"
+      number: "200%",
+      label: "Aumento Médio de Consultas"
     },
     {
       icon: FaAward,
@@ -37,16 +37,16 @@ export const Institutional = () => {
             <div className="space-y-4">
               <AnimatedElement animation="slide-down" delay={200}>
                 <span className="inline-block px-4 py-2 bg-[#FF9025]/20 text-[#FF9025] text-sm font-semibold rounded-full border border-[#FF9025]/30">
-                  Sobre Nós
+                  Especialistas em Clínicas
                 </span>
               </AnimatedElement>
               <AnimatedElement animation="slide-up" delay={300}>
                 <h2 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
-                  Uma agência de{" "}
+                  Marketing Digital{" "}
                   <span className="shimmer-gradient">
-                    Transformação
+                    Especializado
                   </span>{" "}
-                  Digital
+                  para Clínicas
                 </h2>
               </AnimatedElement>
             </div>
@@ -65,10 +65,10 @@ export const Institutional = () => {
             <AnimatedElement animation="slide-up" delay={500}>
               <p className="text-xl text-white/80 leading-relaxed">
                 Somos autoridade em{" "}
-                <span className="text-[#FF9025] font-semibold">e-commerce</span> e temos{" "}
+                <span className="text-[#FF9025] font-semibold">marketing para Clínicas Médicas</span> e temos{" "}
                 <span className="text-[#FF9025] font-semibold">expertise</span> em oferecer{" "}
                 <span className="text-[#FF9025] font-semibold">soluções completas</span> para
-                levar seu negócio ao sucesso através de estratégias inovadoras e resultados mensuráveis.
+                aumentar a confiança dos pacientes, gerar mais consultas e posicionar sua clínica como referência no setor.
               </p>
             </AnimatedElement>
 
@@ -103,18 +103,18 @@ export const Institutional = () => {
             {/* Cards de diferenciais */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
               <AnimatedElement animation="slide-up" delay={600}>
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
+                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 h-40">
                   <CardContent className="p-4">
-                    <h4 className="text-[#FF9025] font-semibold mb-2">Estratégia Personalizada</h4>
-                    <p className="text-white/70 text-sm">Cada projeto é único e desenvolvido especificamente para suas necessidades</p>
+                    <h4 className="text-[#FF9025] font-semibold mb-2">Estratégia para Clínicas</h4>
+                    <p className="text-white/70 text-sm">Cada projeto é desenvolvido especificamente para o setor médico</p>
                   </CardContent>
                 </Card>
               </AnimatedElement>
               <AnimatedElement animation="slide-up" delay={700}>
-                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300">
+                <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 h-40">
                   <CardContent className="p-4">
-                    <h4 className="text-[#FF9025] font-semibold mb-2">Resultados Comprovados</h4>
-                    <p className="text-white/70 text-sm">Metodologia testada que garante crescimento real e sustentável</p>
+                    <h4 className="text-[#FF9025] font-semibold mb-2">Mais Consultas</h4>
+                    <p className="text-white/70 text-sm">Metodologia testada que garante aumento real de pacientes</p>
                   </CardContent>
                 </Card>
               </AnimatedElement>
