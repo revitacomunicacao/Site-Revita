@@ -106,16 +106,47 @@ export const Header = () => {
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="bg-[#11111100] text-[18px] text-gradient-hover">Serviços</NavigationMenuTrigger>
+                    <NavigationMenuTrigger className="bg-[#11111100] text-[18px] text-gradient-hover">
+                      <Link to={"/servicos"}>
+                        Serviços
+                      </Link>
+                      </NavigationMenuTrigger>
                     <NavigationMenuContent className="p-0 border-none ">
                       <div className="flex flex-col gap-3 bg-[#29003c] w-[300px] p-2 rounded-1xl">
                         <div>
-                          <Link to="#" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer"> <HiSpeakerphone className="text-purple-700" /> Marketing</Link>
+                          <Link to="/servicos#branding-medico" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer"> 
+                            <HiSpeakerphone className="text-purple-700" /> 
+                            Branding Médico
+                          </Link>
                         </div>
-                        <Link to="#" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer"> <FaBoltLightning className="text-yellow-500" /> Perfomace</Link>
-                        <Link to="#" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer"> <FaPlay className="text-cyan-600" /> Programatica</Link>
-                        <Link to="#" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer"><IoDesktop className="text-green-700" /> Projetos</Link>
-                        <Link to="#" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer"><FaRocket className="not-placeholder-shown:text-amber-700" /> Seo</Link>
+                        <Link to="/servicos#publicidade-medica" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer"> 
+                          <FaBoltLightning className="text-yellow-500" /> 
+                          Publicidade Médica
+                        </Link>
+                        <Link to="/servicos#redes-sociais" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer"> 
+                          <FaPlay className="text-cyan-600" /> 
+                          Redes Sociais
+                        </Link>
+                        <Link to="/servicos#sites-medicos" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
+                          <IoDesktop className="text-green-700" /> 
+                          Sites Médicos
+                        </Link>
+                        <Link to="/servicos#trafego-pago" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
+                          <FaRocket className="text-amber-700" /> 
+                          Tráfego Pago
+                        </Link>
+                        <Link to="/servicos#seo-medico" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
+                          <HiSpeakerphone className="text-blue-600" /> 
+                          SEO Médico
+                        </Link>
+                        <Link to="/servicos#conteudo-medico" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
+                          <FaPlay className="text-green-600" /> 
+                          Conteúdo Médico
+                        </Link>
+                        <Link to="/servicos#inbound-medico" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
+                          <FaRocket className="text-purple-600" /> 
+                          Inbound Médico
+                        </Link>
                       </div>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
@@ -220,33 +251,51 @@ export const Header = () => {
                     <h3 className="text-[#FF9025] font-semibold text-sm uppercase tracking-wider">Serviços</h3>
                     <div className="space-y-3">
                       <SheetClose asChild>
-                        <Link to="#" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                        <Link to="/servicos#branding-medico" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
                           <HiSpeakerphone className="text-purple-700 text-lg" />
-                          <span>Marketing</span>
+                          <span>Branding Médico</span>
                         </Link>
                       </SheetClose>
                       <SheetClose asChild>
-                        <Link to="#" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                        <Link to="/servicos#publicidade-medica" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
                           <FaBoltLightning className="text-yellow-500 text-lg" />
-                          <span>Performance</span>
+                          <span>Publicidade Médica</span>
                         </Link>
                       </SheetClose>
                       <SheetClose asChild>
-                        <Link to="#" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                        <Link to="/servicos#redes-sociais" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
                           <FaPlay className="text-cyan-600 text-lg" />
-                          <span>Programática</span>
+                          <span>Redes Sociais</span>
                         </Link>
                       </SheetClose>
                       <SheetClose asChild>
-                        <Link to="#" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                        <Link to="/servicos#sites-medicos" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
                           <IoDesktop className="text-green-700 text-lg" />
-                          <span>Projetos</span>
+                          <span>Sites Médicos</span>
                         </Link>
                       </SheetClose>
                       <SheetClose asChild>
-                        <Link to="#" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                        <Link to="/servicos#trafego-pago" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
                           <FaRocket className="text-amber-700 text-lg" />
-                          <span>SEO</span>
+                          <span>Tráfego Pago</span>
+                        </Link>
+                      </SheetClose>
+                      <SheetClose asChild>
+                        <Link to="/servicos#seo-medico" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                          <HiSpeakerphone className="text-blue-600 text-lg" />
+                          <span>SEO Médico</span>
+                        </Link>
+                      </SheetClose>
+                      <SheetClose asChild>
+                        <Link to="/servicos#conteudo-medico" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                          <FaPlay className="text-green-600 text-lg" />
+                          <span>Conteúdo Médico</span>
+                        </Link>
+                      </SheetClose>
+                      <SheetClose asChild>
+                        <Link to="/servicos#inbound-medico" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                          <FaRocket className="text-purple-600 text-lg" />
+                          <span>Inbound Médico</span>
                         </Link>
                       </SheetClose>
                     </div>

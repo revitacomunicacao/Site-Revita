@@ -5,7 +5,7 @@ import iconRevita from "@/assets/iconeDevRevita.png";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#0e0e0e] text-white relative overflow-hidden">
+    <footer className="bg-[#0e0e0e] text-white relative overflow-hidden" style={{ zIndex: 9999 }}>
       {/* Gradiente de fundo */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#660042]/20 via-[#0e0e0e] to-[#0e0e0e]" />
       

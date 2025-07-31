@@ -7,6 +7,7 @@ import calendarIcon from "@/assets/calendar.svg";
 import starIcon from "@/assets/star.svg";
 import usersIcon from "@/assets/users.svg";
 import handshakeIcon from "@/assets/handshake.svg";
+import { FaLocationArrow } from "react-icons/fa";
 
 interface ExperienciaItem {
   icon: string;
@@ -73,17 +74,17 @@ export const Experiencia = () => {
         {/* Cards Grid */}
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {experienciaData.map((item, i) => (
-            <AnimatedElement 
-              key={i} 
-              animation="slide-up" 
+            <AnimatedElement
+              key={i}
+              animation="slide-up"
               delay={i * 200}
             >
               <div className="group relative p-8 rounded-2xl shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 hover:border-gray-600/50 h-full flex flex-col border-t-[#FF9025] border-t-6">
                 {/* Decorative background elements */}
                 <div className="absolute inset-0 rounded-2xl opacity-20 bg-gradient-to-br from-transparent via-white/5 to-transparent"></div>
-                
+
                 {/* Corner accent */}
-                <div 
+                <div
                   className="absolute top-4 right-4 w-3 h-3 rounded-full opacity-60"
                   style={{ backgroundColor: "#FF9025" }}
                 ></div>
@@ -92,8 +93,8 @@ export const Experiencia = () => {
                 <div className="relative mb-8 flex-shrink-0">
                   {/* Icon without background */}
                   <div className="flex items-center justify-center mb-4 mx-auto">
-                    <img 
-                      src={item.icon} 
+                    <img
+                      src={item.icon}
                       alt={item.title}
                       className="w-16 h-16 relative z-10 transition-transform duration-300 group-hover:scale-110"
                     />
@@ -105,18 +106,18 @@ export const Experiencia = () => {
                   <h3 className="text-xl font-bold mb-4 leading-tight text-white group-hover:text-gray-100 transition-colors duration-300 text-center">
                     {item.title}
                   </h3>
-                  
+
                   <p className="text-sm leading-relaxed text-gray-300 group-hover:text-gray-200 transition-colors duration-300 flex-1">
                     {item.description}
                   </p>
-                  
+
                   {/* Bottom accent */}
                   <div className="mt-6 flex items-center justify-center gap-2">
-                    <div 
+                    <div
                       className="w-8 h-0.5 rounded-full"
                       style={{ backgroundColor: "#FF9025" }}
                     ></div>
-                    <div 
+                    <div
                       className="w-4 h-0.5 rounded-full opacity-60"
                       style={{ backgroundColor: "#FF9025" }}
                     ></div>
@@ -131,13 +132,11 @@ export const Experiencia = () => {
         </div>
 
         {/* Bottom CTA Section */}
-        <AnimatedElement animation="slide-up" delay={800} className="text-center mt-16">
-          <div className="inline-flex items-center gap-4 bg-gradient-to-r from-[#FF9025] to-orange-600 px-8 py-4 rounded-full shadow-2xl">
-            <img src={starIcon} alt="Estrela" className="w-6 h-6" />
-            <span className="text-[#660042] font-bold text-lg">
-              Pronto para transformar sua clínica?
-            </span>
-          </div>
+        <AnimatedElement animation="slide-up" delay={800} className="text-center mt-16 flex justify-center">
+          <button className="group px-8 py-4 bg-[#FF9025] text-[#660042] font-bold text-lg rounded-full hover:bg-white hover:text-[#FF9025] transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer">
+            Fale Conosco
+            <FaLocationArrow size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
+          </button>
         </AnimatedElement>
       </div>
     </section>

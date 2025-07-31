@@ -18,7 +18,7 @@ const portfolioData = Array.from({ length: 6 }).map(() => ({
 
 export const Portfolio = () => {
   return (
-    <section className="w-full py-24 bg-background flex flex-col items-center justify-center">
+    <section className="w-full pt-14 bg-background flex flex-col items-center justify-center">
       {/* Título grande e moderno */}
       <AnimatedElement animation="slide-down" className="flex flex-col md:flex-row gap-6 md:gap-12 justify-center items-center mb-12 w-full px-6">
         <AnimatedElement animation="slide-right" delay={200}>
@@ -28,7 +28,7 @@ export const Portfolio = () => {
         </AnimatedElement>
         <AnimatedElement animation="slide-up" delay={300}>
           <h1 className="text-3xl sm:text-5xl md:text-[90px] leading-snug text-white font-bold text-center md:text-left">
-            Casos de <br />
+            Cases de <br />
             <span className="shimmer-gradient">
               Sucesso
             </span>

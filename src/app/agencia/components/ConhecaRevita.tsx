@@ -3,8 +3,8 @@ import { Users, Calendar, Users as Collaborators } from "lucide-react"
 
 export const ConhecaRevita = () => {
   return (
-    <section className="py-20 bg-[#1a1a1a]">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-[#1a1a1a] flex justify-center">
+      <div className="container mx-auto px-4 w-[1200px]">
         <AnimatedElement animation="slide-up" delay={500}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Textos na esquerda */}
@@ -62,15 +62,14 @@ export const ConhecaRevita = () => {
             {/* Foto do Rodrigo na direita */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="w-72 h-72 rounded-full overflow-hidden border-4 border-[#FF9025]/30 shadow-2xl">
+                
                   <img 
-                    src="/src/assets/rodrigo.jpg" 
+                    src="./src/assets/rodrihopedro.png" 
                     alt="Rodrigo Bindes" 
                     className="w-full h-full object-cover"
                   />
-                </div>
                 <div className="absolute -bottom-4 -right-4 bg-[#FF9025] text-black px-3 py-1 rounded-full text-xs font-semibold">
-                  Rodrigo Bindes
+                  Rodrigo Nascimento
                 </div>
               </div>
             </div>

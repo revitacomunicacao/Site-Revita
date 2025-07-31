@@ -73,7 +73,7 @@ export const Institutional = () => {
             </AnimatedElement>
 
             <AnimatedElement animation="scale-in" delay={600}>
-              <button className="group px-8 py-4 bg-[#FF9025] text-[#660042] font-bold text-lg rounded-full hover:bg-white hover:text-[#FF9025] transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <button className="group px-8 py-4 bg-[#FF9025] text-[#660042] font-bold text-lg rounded-full hover:bg-white hover:text-[#FF9025] transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer">
                 Fale Conosco
                 <FaLocationArrow size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
               </button>
