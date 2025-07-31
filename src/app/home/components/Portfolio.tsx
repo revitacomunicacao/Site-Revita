@@ -8,8 +8,8 @@ import Trofeu from "@/assets/trofeu.svg";
 import { AnimatedElement } from "@/components/AnimatedElement";
 
 const portfolioData = Array.from({ length: 6 }).map(() => ({
-  name: "Clínica CardioVida",
-  site: "https://clinicacardiovida.com.br/",
+  name: "Choperia Colorado",
+  site: "https://choperiacolorado.com.br/",
   logo: logoColorado,
   bg: portfolioImg,
   desc: "Clínica especializada em cardiologia que se tornou referência na região. Desenvolvemos estratégias digitais completas para aumentar a confiança dos pacientes e gerar mais consultas.",

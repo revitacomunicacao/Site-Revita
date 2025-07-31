@@ -142,15 +142,20 @@ export const Footer = () => {
                 <div className="flex items-start gap-3">
                   <Phone className="text-secondary mt-1 flex-shrink-0" size={16} />
                   <div>
-                    <p className="text-white/70 text-sm">(34) 99710-0854</p>
-                    <p className="text-white/70 text-sm">(34) 99710-0854</p>
+                    <p className="text-white/70 text-sm">(34) 99637-4463</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <FaWhatsapp className="text-secondary mt-1 flex-shrink-0" size={16} />
+                  <div>
+                    <p className="text-white/70 text-sm">(34) 99637-4463</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <MapPin className="text-secondary mt-1 flex-shrink-0" size={16} />
                   <div>
-                    <p className="text-white/70 text-sm">Uberlândia - MG</p>
-                    <p className="text-white/70 text-sm">Brasil</p>
+                    <p className="text-white/70 text-sm">Rua Padre Zeferino, 819</p>
+                    <p className="text-white/70 text-sm">Uberaba - MG</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">

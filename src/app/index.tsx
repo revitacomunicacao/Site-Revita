@@ -16,8 +16,8 @@ export default function HomePage() {
       <Banner />
       <Institutional />
       <Servicos />
-      <Portfolio />
       <Experiencia />
+      <Portfolio />
       <LogoCarousel />
     </main>
   )

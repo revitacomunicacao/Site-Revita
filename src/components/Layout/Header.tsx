@@ -61,11 +61,11 @@ export const Header = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="text-secondary" size={15} />
-                <p className="text-[12px]">(34) 997100854</p>
+                <p className="text-[12px]">(34) 99637-4463</p>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="text-secondary" size={15} />
-                <p className="text-[12px]">(34) 997100854</p>
+                <FaWhatsapp className="text-secondary" size={15} />
+                <p className="text-[12px]">(34) 99637-4463</p>
               </div>
             </div>
             {/* Redes Sociais */}
@@ -101,7 +101,7 @@ export const Header = () => {
 
                   <NavigationMenuItem>
                     <NavigationMenuLink asChild className="text-[18px] text-gradient-hover whitespace-nowrap">
-                      <Link to="/agencia">A Agencia</Link>
+                      <Link to="/agencia">A Agência</Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
 
@@ -311,11 +311,11 @@ export const Header = () => {
                       </div>
                       <div className="flex items-center gap-3 text-white">
                         <Phone className="text-[#FF9025] text-lg" />
-                        <span className="text-sm">(34) 997100854</span>
+                        <span className="text-sm">(34) 99637-4463</span>
                       </div>
                       <div className="flex items-center gap-3 text-white">
-                        <Phone className="text-[#FF9025] text-lg" />
-                        <span className="text-sm">(34) 997100854</span>
+                        <FaWhatsapp className="text-[#FF9025] text-lg" />
+                        <span className="text-sm">(34) 99637-4463</span>
                       </div>
                     </div>
                   </div>

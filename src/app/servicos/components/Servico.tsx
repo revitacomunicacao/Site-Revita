@@ -79,7 +79,7 @@ export const Servico:React.FC<props> = ({ title, title2, description, imagem, ba
                     }`}
                     style={{ transitionDelay: `${600 + idx * 150}ms` }}
                   >
-                    <Badge className="bg-secondary text-[#1a1a1a] hover:bg-amber-400 transition-colors duration-300 text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-2">
+                    <Badge className="bg-secondary text-[#1a1a1a] hover:bg-amber-400 transition-colors duration-300 text-xs">
                       {b.name}
                     </Badge>
                   </div>

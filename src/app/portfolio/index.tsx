@@ -1,26 +1,18 @@
-import { PageHeader } from "@/components/Layout/PageHeader";
+import { PageHeader } from "@/components/Layout/PageHeader"
+import { PortfolioGrid } from "./components/PortfolioGrid"
 
 export default function Portfolio() {
-  return(
-    <main>
+  return (
+    <>
       <PageHeader 
-        title="Nosso Portfolio"
-        subtitle="Conheça alguns dos nossos projetos de sucesso e cases que transformaram clínicas médicas em referências no mercado."
+        title="Nossos Serviços"
+        subtitle="Somos autoridade em marketing para Clínicas Médicas e temos expertise em oferecer soluções completas para aumentar a confiança dos pacientes, gerar mais consultas e posicionar sua clínica como referência no setor."
         breadcrumb={[
-          { label: "Portfolio", href: "/portfolio" }
+          { label: "Nossos Serviços", href: "/servicos" }
         ]}
-        highlightWords={["Portfolio", "projetos", "sucesso"]}
+        highlightWords={["Agência", "Marketing", "Clínicas"]}
       />
-      
-      {/* Conteúdo da página aqui */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
-            Projetos em Destaque
-          </h2>
-          {/* Adicione aqui o conteúdo do portfolio */}
-        </div>
-      </section>
-    </main>
-  )
+      <PortfolioGrid />
+    </>
+)
 }

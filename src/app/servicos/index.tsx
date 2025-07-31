@@ -1,4 +1,4 @@
-import { Servico } from "./components/servico"
+import { Servico } from "./components/Servico"
 import foto1 from "@/assets/FeaturesBanner02.png"
 import foto2 from "@/assets/FeaturesBanner01.png"
 import { PageHeader } from "@/components/Layout/PageHeader"
@@ -10,7 +10,7 @@ export default function Servicos() {
   return (
     <>
         <PageHeader 
-        title="Nossos Agência"
+        title="Nossos Serviços"
         subtitle="Somos autoridade em marketing para Clínicas Médicas e temos expertise em oferecer soluções completas para aumentar a confiança dos pacientes, gerar mais consultas e posicionar sua clínica como referência no setor."
         breadcrumb={[
           { label: "Nossos Serviços", href: "/servicos" }
