@@ -6,32 +6,32 @@ export const GaleriaAgencia = () => {
   const fotos = [
     {
       id: 1,
-      src: "/src/assets/agencia-1.jpg", // Substitua pelo caminho real
+      src: "#", // Placeholder - substitua pela imagem real quando disponível
       alt: "Equipe em reunião"
     },
     {
       id: 2,
-      src: "/src/assets/agencia-2.jpg", // Substitua pelo caminho real
+      src: "#", // Placeholder - substitua pela imagem real quando disponível
       alt: "Desenvolvimento de projetos"
     },
     {
       id: 3,
-      src: "/src/assets/agencia-3.jpg", // Substitua pelo caminho real
+      src: "#", // Placeholder - substitua pela imagem real quando disponível
       alt: "Momento de descontração"
     },
     {
       id: 4,
-      src: "/src/assets/agencia-4.jpg", // Substitua pelo caminho real
+      src: "#", // Placeholder - substitua pela imagem real quando disponível
       alt: "Trabalho em equipe"
     },
     {
       id: 5,
-      src: "/src/assets/agencia-5.jpg", // Substitua pelo caminho real
+      src: "#", // Placeholder - substitua pela imagem real quando disponível
       alt: "Apresentação de projetos"
     },
     {
       id: 6,
-      src: "/src/assets/agencia-6.jpg", // Substitua pelo caminho real
+      src: "#", // Placeholder - substitua pela imagem real quando disponível
       alt: "Momento de café"
     }
   ]

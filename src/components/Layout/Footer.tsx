@@ -1,6 +1,6 @@
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
-import logo from "@/assets/logoRevitaComunicação.png";
+import logo from "@/assets/logoRevitaComunicacao.png";
 import iconRevita from "@/assets/iconeDevRevita.png";
 
 export const Footer = () => {

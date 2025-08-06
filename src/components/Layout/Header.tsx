@@ -11,7 +11,7 @@ import {
 import { HiSpeakerphone } from "react-icons/hi";
 import { FaBoltLightning } from "react-icons/fa6";
 import { IoDesktop } from "react-icons/io5";
-import logo from "@/assets/logoRevitaComunicação.png"
+import logo from "@/assets/logoRevitaComunicacao.png"
 import { HiOutlineChatBubbleOvalLeftEllipsis } from "react-icons/hi2";
 import { useEffect, useRef, useState } from "react";
 import {

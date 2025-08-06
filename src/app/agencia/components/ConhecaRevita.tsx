@@ -1,5 +1,6 @@
 import { AnimatedElement } from "@/components/AnimatedElement"
 import { Users, Calendar, Users as Collaborators } from "lucide-react"
+import rodrihopedro from "@/assets/rodrihopedro.png"
 
 export const ConhecaRevita = () => {
   return (
@@ -63,11 +64,11 @@ export const ConhecaRevita = () => {
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
                 
-                  <img 
-                    src="./src/assets/rodrihopedro.png" 
-                    alt="Rodrigo Bindes" 
-                    className="w-full h-full object-cover"
-                  />
+                                  <img 
+                  src={rodrihopedro} 
+                  alt="Rodrigo Bindes" 
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute -bottom-4 -right-4 bg-[#FF9025] text-black px-3 py-1 rounded-full text-xs font-semibold">
                   Rodrigo Nascimento
                 </div>
