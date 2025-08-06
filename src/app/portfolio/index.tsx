@@ -12,7 +12,9 @@ export default function Portfolio() {
         ]}
         highlightWords={["Agência", "Marketing", "Clínicas"]}
       />
-      <PortfolioGrid />
+      <div className="my-8">
+        <PortfolioGrid />
+      </div>
     </>
 )
 }

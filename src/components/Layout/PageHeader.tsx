@@ -20,32 +20,10 @@ export const PageHeader = ({
   breadcrumb = [], 
   backgroundImage,
   className = "",
-  highlightWords = []
 }: PageHeaderProps) => {
-  // Função para aplicar shimmer em palavras específicas
-  const renderTitleWithShimmer = (titleText: string) => {
-    if (highlightWords.length === 0) {
-      return <span className="shimmer-gradient">{titleText}</span>
-    }
 
-    const words = titleText.split(' ')
-    return words.map((word, index) => {
-      const shouldHighlight = highlightWords.some(highlight => 
-        word.toLowerCase().includes(highlight.toLowerCase())
-      )
-      
-      return (
-        <span key={index}>
-          {shouldHighlight ? (
-            <span className="shimmer-gradient">{word}</span>
-          ) : (
-            word
-          )}
-          {index < words.length - 1 ? ' ' : ''}
-        </span>
-      )
-    })
-  }
+  const [first, second] = title.split(" ")
+
 
   return (
     <section 
@@ -87,7 +65,7 @@ export const PageHeader = ({
         <AnimatedElement animation="slide-up" delay={300}>
           <div className="text-center mb-6">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              {renderTitleWithShimmer(title)}
+              {first} <span className="shimmer-gradient">{second}</span>
             </h1>
           </div>
         </AnimatedElement>

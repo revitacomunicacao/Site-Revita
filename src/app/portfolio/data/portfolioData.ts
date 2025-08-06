@@ -125,7 +125,8 @@ export const portfolioData: Record<string, IPortfolios[]> = {
       imagem_destaque: "https://via.placeholder.com/600x400/660042/ffffff?text=Vídeo+Cardíaca",
       logo: "https://via.placeholder.com/100x100/660042/ffffff?text=CC",
       categories: ["Vídeos"],
-      tags: ["Institucional", "Emocional", "Equipe", "Instalações"]
+      tags: ["Institucional", "Emocional", "Equipe", "Instalações"],
+      url_do_video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
     },
     {
       id: 14,
@@ -134,7 +135,8 @@ export const portfolioData: Record<string, IPortfolios[]> = {
       imagem_destaque: "https://via.placeholder.com/600x400/FF9025/ffffff?text=Vídeo+Educativo",
       logo: "https://via.placeholder.com/100x100/FF9025/ffffff?text=CD",
       categories: ["Vídeos"],
-      tags: ["Educativo", "Saúde Mental", "Série", "Dicas"]
+      tags: ["Educativo", "Saúde Mental", "Série", "Dicas"],
+      url_do_video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
     },
     {
       id: 15,
@@ -143,7 +145,8 @@ export const portfolioData: Record<string, IPortfolios[]> = {
       imagem_destaque: "https://via.placeholder.com/600x400/1a1a1a/ffffff?text=Depoimentos",
       logo: "https://via.placeholder.com/100x100/1a1a1a/ffffff?text=DP",
       categories: ["Vídeos"],
-      tags: ["Depoimentos", "Resultados", "Satisfação", "Confiança"]
+      tags: ["Depoimentos", "Resultados", "Satisfação", "Confiança"],
+      url_do_video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
     }
   ]
 }; 

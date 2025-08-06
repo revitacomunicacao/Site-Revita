@@ -6,4 +6,5 @@ export interface IPortfolios {
   imagem_destaque: string;
   logo: string;
   tags: string[];
+  url_do_video?: string;
 }
