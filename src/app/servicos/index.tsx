@@ -1,5 +1,4 @@
 import { Servico } from "./components/Servico"
-import { FloatingNavigation } from "./components/FloatingNavigation"
 import foto1 from "@/assets/FeaturesBanner02.png"
 import foto2 from "@/assets/FeaturesBanner01.png"
 import { PageHeader } from "@/components/Layout/PageHeader"
@@ -149,9 +148,6 @@ export default function Servicos() {
         index={0}
         id="inbound-medico"
       />
-
-      {/* Navegação Flutuante */}
-      <FloatingNavigation onCategoryClick={handleCategoryClick} />
     </>
   )
 }

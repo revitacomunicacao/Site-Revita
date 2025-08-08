@@ -10,6 +10,7 @@ import {
   Loader2
 } from "lucide-react"
 import getPortfolio from "../services/getPortfolio"
+import { scrollToAnchor } from "@/hooks/useScrollToAnchor"
 
 const categoryConfig = {
   branding: {
@@ -74,61 +75,7 @@ export const PortfolioGrid: React.FC = () => {
 
   const handleCategoryClick = (categoryId: string) => {
     console.log("🔄 Tentando navegar para:", categoryId)
-    
-    // Pequeno delay para garantir que o DOM está pronto
-    setTimeout(() => {
-      const element = document.getElementById(categoryId)
-      if (element) {
-        console.log("✅ Elemento encontrado:", element)
-        
-        const currentPosition = window.scrollY
-        const elementTop = element.offsetTop
-        const headerHeight = 100
-        
-        console.log("📍 Posição atual:", currentPosition)
-        console.log("📍 Posição do elemento:", elementTop)
-        
-        // Verificar se precisa subir ou descer
-        if (elementTop < currentPosition) {
-          console.log("⬆️ Navegando para cima")
-          // Para cima - usar scrollIntoView com block: 'start'
-          element.scrollIntoView({ 
-            behavior: 'smooth',
-            block: 'start',
-            inline: 'nearest'
-          })
-          
-          // Ajuste adicional para considerar o header
-          setTimeout(() => {
-            window.scrollBy({
-              top: -headerHeight,
-              behavior: 'smooth'
-            })
-          }, 100)
-        } else {
-          console.log("⬇️ Navegando para baixo")
-          // Para baixo - usar scrollIntoView normal
-          element.scrollIntoView({ 
-            behavior: 'smooth',
-            block: 'start',
-            inline: 'nearest'
-          })
-          
-          // Ajuste adicional para considerar o header
-          setTimeout(() => {
-            window.scrollBy({
-              top: -headerHeight,
-              behavior: 'smooth'
-            })
-          }, 100)
-        }
-        
-        console.log("📍 Scrollando para posição:", elementTop)
-      } else {
-        console.error("❌ Elemento não encontrado:", categoryId)
-        console.log("🔍 Elementos disponíveis:", Array.from(document.querySelectorAll('[id]')).map(el => el.id))
-      }
-    }, 100)
+    scrollToAnchor(categoryId, 120)
   }
 
   // Função para organizar dados da API por categoria
@@ -200,7 +147,7 @@ export const PortfolioGrid: React.FC = () => {
             <section 
               key={key}
               id={key}
-              className="w-full"
+              className="w-full scroll-mt-32"
             >
               {/* Header da categoria centralizado */}
               <div className="text-center mb-12 px-4">

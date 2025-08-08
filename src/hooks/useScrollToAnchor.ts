@@ -22,4 +22,19 @@ export const useScrollToAnchor = () => {
       }
     }
   }, [location.hash])
+}
+
+// Função utilitária para scroll para âncora
+export const scrollToAnchor = (anchorId: string, headerHeight: number = 120) => {
+  setTimeout(() => {
+    const element = document.getElementById(anchorId)
+    if (element) {
+      const elementPosition = element.offsetTop - headerHeight
+      
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      })
+    }
+  }, 100)
 } 

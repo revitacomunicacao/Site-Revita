@@ -60,7 +60,7 @@ export const FloatingNavigation: React.FC<FloatingNavigationProps> = ({ onCatego
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 150 // Offset para considerar header
+      const scrollPosition = window.scrollY + 200 // Offset para considerar header
 
       // Encontrar qual seção está visível
       let currentActive = ""
@@ -116,7 +116,7 @@ export const FloatingNavigation: React.FC<FloatingNavigationProps> = ({ onCatego
 
   return (
     <TooltipProvider>
-      <div className="fixed right-6 top-1/2 transform -translate-y-1/2 z-50 space-y-3">
+      <div className="fixed right-6 top-1/2 transform -translate-y-1/2 z-[9999] space-y-3">
         {categories.map((category, index) => {
           const IconComponent = category.icon
           const isActive = activeCategory === category.id

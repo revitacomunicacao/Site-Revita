@@ -47,7 +47,7 @@ export const LogoCarousel = () => {
       </AnimatedElement>
 
       {/* Carrossel */}
-      <div className="w-full relative px-4 sm:px-6">
+      <div className="w-full relative px-4 sm:px-6 group">
         <Carousel
           opts={{
             align: "start",
@@ -70,11 +70,11 @@ export const LogoCarousel = () => {
             ))}
           </CarouselContent>
           
-          {/* Setas de navegação */}
-          <CarouselPrevious className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-[#660042] border-[#FF9025] hover:bg-[#FF9025] hover:text-[#660042] transition-all duration-300">
+          {/* Setas de navegação - aparecem apenas no hover */}
+          <CarouselPrevious className="!bg-gray-600 !border-gray-500 !text-white hover:!bg-gray-700 transition-all duration-300 invisible group-hover:visible scale-90 group-hover:scale-100 absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 group-hover:!opacity-100">
             <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
           </CarouselPrevious>
-          <CarouselNext className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-[#660042] border-[#FF9025] hover:bg-[#FF9025] hover:text-[#660042] transition-all duration-300">
+          <CarouselNext className="!bg-gray-600 !border-gray-500 !text-white hover:!bg-gray-700 transition-all duration-300 invisible group-hover:visible scale-90 group-hover:scale-100 absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 group-hover:!opacity-100">
             <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
           </CarouselNext>
         </Carousel>
