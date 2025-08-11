@@ -177,7 +177,7 @@ export const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-white/60 text-xs sm:text-sm text-center sm:text-left">
-              © 2024 Revita Comunicação. Todos os direitos reservados.
+              © 2025 Revita Comunicação. Todos os direitos reservados.
             </p>
             <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6 text-xs sm:text-sm">
               <a href="/termos" className="text-white/60 hover:text-secondary transition-colors duration-300">

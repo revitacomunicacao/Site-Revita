@@ -2,35 +2,14 @@ import { Servico } from "./components/Servico"
 import foto1 from "@/assets/FeaturesBanner02.png"
 import foto2 from "@/assets/FeaturesBanner01.png"
 import { PageHeader } from "@/components/Layout/PageHeader"
-import { useScrollToAnchor } from "@/hooks/useScrollToAnchor"
+import { useScrollToAnchor, scrollToAnchor } from "@/hooks/useScrollToAnchor"
 
 export default function Servicos() {
   useScrollToAnchor()
 
   const handleCategoryClick = (categoryId: string) => {
     console.log("🔄 Tentando navegar para:", categoryId)
-    
-    const element = document.getElementById(categoryId)
-    if (element) {
-      console.log("✅ Elemento encontrado:", element)
-      
-      // Calcular a posição considerando o header
-      const headerHeight = 80
-      const elementTop = element.offsetTop
-      const targetPosition = elementTop - headerHeight
-      
-      console.log("📍 Posição atual:", window.scrollY)
-      console.log("📍 Posição do elemento:", elementTop)
-      console.log("📍 Posição alvo:", targetPosition)
-      
-      // Scroll suave para a posição calculada
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      })
-    } else {
-      console.error("❌ Elemento não encontrado:", categoryId)
-    }
+    scrollToAnchor(categoryId, 80)
   }
 
   return (

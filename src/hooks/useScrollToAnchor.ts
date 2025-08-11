@@ -11,21 +11,21 @@ export const useScrollToAnchor = () => {
       if (element) {
         // Aguardar um pouco para garantir que o DOM está pronto
         setTimeout(() => {
-          const headerHeight = 120 // Altura aproximada do header
+          const headerHeight = 80 // Altura ajustada do header
           const elementPosition = element.offsetTop - headerHeight
           
           window.scrollTo({
             top: elementPosition,
             behavior: 'smooth'
           })
-        }, 100)
+        }, 200) // Aumentado o delay para garantir que a página carregou
       }
     }
   }, [location.hash])
 }
 
 // Função utilitária para scroll para âncora
-export const scrollToAnchor = (anchorId: string, headerHeight: number = 120) => {
+export const scrollToAnchor = (anchorId: string, headerHeight: number = 80) => {
   setTimeout(() => {
     const element = document.getElementById(anchorId)
     if (element) {
@@ -36,5 +36,5 @@ export const scrollToAnchor = (anchorId: string, headerHeight: number = 120) => 
         behavior: 'smooth'
       })
     }
-  }, 100)
+  }, 200) // Aumentado o delay para garantir que a página carregou
 } 

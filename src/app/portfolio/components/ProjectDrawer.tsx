@@ -2,6 +2,7 @@ import React from "react"
 import { Drawer, DrawerContent, DrawerHeader, DrawerTitle } from "@/components/ui/drawer"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
+import { ScrollArea } from "@/components/ui/scroll-area"
 import type { IPortfolios } from "../types/IPortfolios"
 
 interface ProjectDrawerProps {
@@ -38,95 +39,97 @@ export const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
   return (
     <Drawer open={isOpen} onOpenChange={onClose}>
       <DrawerContent className="bg-gradient-to-b from-gray-900 to-gray-800 border-t border-gray-700">
-        <div className="mx-auto w-full max-w-[1200px]">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-8">
-            
-            {/* Coluna Esquerda - Título e Foto/Vídeo */}
-            <div className="lg:col-span-1 space-y-6">
-              <div>
-                <DrawerTitle className="text-4xl font-bold text-white text-left mb-4">
-                  {project.title}
-                </DrawerTitle>
-              </div>
+        <ScrollArea className="h-[calc(100vh-80px)] pr-4">
+          <div className="mx-auto w-full max-w-[1200px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 p-4 md:p-6 lg:p-8 pb-8">
               
-              {/* Imagem destacada ou Vídeo */}
-              <div className="relative w-full h-80 rounded-xl overflow-hidden">
-                {isVideo && videoId ? (
-                  <iframe
-                    src={`https://www.youtube.com/embed/${videoId}`}
-                    title={project.title}
-                    className="w-full h-full"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                ) : (
-                  <>
-                    <img
-                      src={project.imagem_destaque}
-                      alt={project.title}
-                      className="w-full h-full object-cover"
+              {/* Coluna Esquerda - Título e Foto/Vídeo */}
+              <div className="md:col-span-2 lg:col-span-1 space-y-4 md:space-y-6">
+                <div>
+                  <DrawerTitle className="text-2xl md:text-3xl lg:text-4xl font-bold text-white text-left mb-4">
+                    {project.title}
+                  </DrawerTitle>
+                </div>
+                
+                {/* Imagem destacada ou Vídeo */}
+                <div className="relative w-full h-48 md:h-64 lg:h-80 rounded-xl overflow-hidden">
+                  {isVideo && videoId ? (
+                    <iframe
+                      src={`https://www.youtube.com/embed/${videoId}`}
+                      title={project.title}
+                      className="w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  </>
-                )}
-              </div>
-            </div>
-
-            {/* Coluna Meio - Descrição */}
-            <div className="lg:col-span-1 space-y-6">
-              <div className="text-left">
-                <h3 className="text-2xl font-semibold text-white mb-6">
-                  Sobre o Projeto
-                </h3>
-                <p className="text-gray-300 leading-relaxed text-left text-lg">
-                  {project.description}
-                </p>
-              </div>
-            </div>
-
-            {/* Coluna Direita - Outras Informações */}
-            <div className="lg:col-span-1 space-y-8">
-              
-              {/* Categorias */}
-              <div className="text-left">
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  Categorias
-                </h3>
-                <div className="flex flex-wrap gap-3">
-                  {project.categories.map((category, index) => (
-                    <Badge
-                      key={index}
-                      className="bg-secondary text-[#1a1a1a] hover:bg-amber-400 transition-colors duration-300 text-base px-4 py-2"
-                    >
-                      {category}
-                    </Badge>
-                  ))}
+                  ) : (
+                    <>
+                      <img
+                        src={project.imagem_destaque}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    </>
+                  )}
                 </div>
               </div>
 
-              <Separator className="bg-gray-700" />
-
-              {/* Tags */}
-              <div className="text-left">
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  Tags
-                </h3>
-                <div className="flex flex-wrap gap-3">
-                  {project.tags.map((tag, index) => (
-                    <Badge
-                      key={index}
-                      variant="outline"
-                      className="border-gray-600 text-gray-300 hover:bg-gray-700 transition-colors duration-300 text-base px-4 py-2"
-                    >
-                      {tag}
-                    </Badge>
-                  ))}
+              {/* Coluna Meio - Descrição */}
+              <div className="md:col-span-2 lg:col-span-1 space-y-4 md:space-y-6">
+                <div className="text-left">
+                  <h3 className="text-xl md:text-2xl font-semibold text-white mb-4 md:mb-6">
+                    Sobre o Projeto
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed text-left text-base md:text-lg">
+                    {project.description}
+                  </p>
                 </div>
+              </div>
+
+              {/* Coluna Direita - Outras Informações */}
+              <div className="md:col-span-2 lg:col-span-1 space-y-6 md:space-y-8">
+                
+                {/* Categorias */}
+                <div className="text-left">
+                  <h3 className="text-lg md:text-xl font-semibold text-white mb-3 md:mb-4">
+                    Categorias
+                  </h3>
+                  <div className="flex flex-wrap gap-2 md:gap-3">
+                    {project.categories.map((category, index) => (
+                      <Badge
+                        key={index}
+                        className="bg-secondary text-[#1a1a1a] hover:bg-amber-400 transition-colors duration-300 text-sm md:text-base px-3 md:px-4 py-1 md:py-2"
+                      >
+                        {category}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+
+                <Separator className="bg-gray-700" />
+
+                {/* Tags */}
+                <div className="text-left">
+                  <h3 className="text-lg md:text-xl font-semibold text-white mb-3 md:mb-4">
+                    Tags
+                  </h3>
+                  <div className="flex flex-wrap gap-2 md:gap-3">
+                    {project.tags.map((tag, index) => (
+                      <Badge
+                        key={index}
+                        variant="outline"
+                        className="border-gray-600 text-gray-300 hover:bg-gray-700 transition-colors duration-300 text-sm md:text-base px-3 md:px-4 py-1 md:py-2"
+                      >
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+                <div className="h-40" />
               </div>
             </div>
           </div>
-        </div>
+        </ScrollArea>
       </DrawerContent>
     </Drawer>
   )

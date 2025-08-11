@@ -81,7 +81,7 @@ export const NossaHistoria = () => {
                   <AnimatedElement key={index} animation="scale-in" delay={700 + (index * 200)}>
                     <div className="relative">
                       {/* Card principal */}
-                      <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/20 h-[320px] flex flex-col justify-between">
+                      <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/20 h-[340px] flex flex-col justify-between">
                         <div className="relative z-10">
                           {/* Ícone */}
                           <div className="relative mb-6">

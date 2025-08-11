@@ -22,7 +22,7 @@ const logos = [
 
 export const LogoCarousel = () => {
   return (
-    <section className="w-full bg-background relative overflow-hidden sm:py-12">
+    <section className="w-full bg-background relative overflow-hidden py-12">
       {/* Título grande e moderno */}
       <AnimatedElement animation="slide-down" className="flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-12 justify-center items-center mb-8 sm:mb-12 w-full px-4 sm:px-6">
         <AnimatedElement animation="slide-right" delay={200}>

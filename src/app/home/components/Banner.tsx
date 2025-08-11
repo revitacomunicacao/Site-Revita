@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import modeloSelos from "@/assets/Modelo-Selos.png";
 import backgroundVideo from "@/assets/video-luzes-vertical.mp4";
 
@@ -114,31 +115,129 @@ export const Banner = () => {
         })}
       </div>
       
-      {/* Setas */}
+      {/* Setas para desktop */}
       <button
         onClick={prev}
-        className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-30 bg-black/80 backdrop-blur-sm hover:bg-[#660042] text-white border border-white/20 shadow-xl rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center transition-all duration-300"
+        className="hidden lg:flex absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-black/80 backdrop-blur-sm hover:bg-[#660042] text-white border border-white/20 shadow-xl rounded-full w-12 h-12 items-center justify-center transition-all duration-300"
         aria-label="Anterior"
       >
-        <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="sm:w-6 sm:h-6"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        <IoChevronBack className="w-6 h-6" />
       </button>
       <button
         onClick={next}
-        className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-30 bg-black/80 backdrop-blur-sm hover:bg-[#FF9025] text-white border border-white/20 shadow-xl rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center transition-all duration-300"
+        className="hidden lg:flex absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-black/80 backdrop-blur-sm hover:bg-[#FF9025] text-white border border-white/20 shadow-xl rounded-full w-12 h-12 items-center justify-center transition-all duration-300"
         aria-label="Próximo"
       >
-        <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="sm:w-6 sm:h-6"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <IoChevronForward className="w-6 h-6" />
       </button>
       
-      {/* Indicadores */}
-      <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex gap-2 sm:gap-3 z-30">
-        {slides.map((_, idx) => (
-          <span
-            key={idx}
-            onClick={() => goTo(idx)}
-            className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full border-2 border-[#FF9025] cursor-pointer transition-all duration-300 ${current === idx ? 'bg-[#FF9025] scale-110 shadow-lg' : 'bg-transparent'}`}
-          />
-        ))}
+      {/* Container para setas e indicadores no mobile */}
+      <div className="lg:hidden absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-4 z-30">
+        {/* Seta esquerda */}
+        <button
+          onClick={prev}
+          className="bg-black/80 backdrop-blur-sm hover:bg-[#660042] text-white border border-white/20 shadow-xl rounded-full w-10 h-10 flex items-center justify-center transition-all duration-300"
+          aria-label="Anterior"
+        >
+          <IoChevronBack className="w-5 h-5" />
+        </button>
+        
+        {/* Indicadores com animações modernas */}
+        <div className="flex items-center gap-3 bg-black/30 backdrop-blur-md rounded-2xl px-4 py-3 border border-white/20 shadow-2xl">
+          {slides.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => goTo(idx)}
+              className="group relative"
+              aria-label={`Ir para slide ${idx + 1}`}
+            >
+              {/* Indicador principal */}
+              <div className={`relative w-3 h-3 rounded-full transition-all duration-700 ease-out ${
+                current === idx 
+                  ? 'scale-125' 
+                  : 'scale-100'
+              }`}>
+                {/* Círculo de fundo com gradiente */}
+                <div className={`absolute inset-0 rounded-full transition-all duration-500 ${
+                  current === idx 
+                    ? 'bg-gradient-to-r from-[#FF9025] to-[#FF6B35] shadow-lg shadow-[#FF9025]/40' 
+                    : 'bg-white/40 group-hover:bg-white/60'
+                }`} />
+                
+                {/* Efeito de pulso para o ativo */}
+                {current === idx && (
+                  <>
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#FF9025] to-[#FF6B35] animate-ping opacity-75" />
+                    <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-[#FF9025]/30 to-[#FF6B35]/30 blur-sm animate-pulse" />
+                  </>
+                )}
+                
+                {/* Círculo interno */}
+                <div className={`absolute inset-1 rounded-full transition-all duration-300 ${
+                  current === idx 
+                    ? 'bg-gradient-to-r from-[#FF9025] to-[#FF6B35]' 
+                    : 'bg-white/80 group-hover:bg-white'
+                }`} />
+              </div>
+              
+              
+            </button>
+          ))}
+        </div>
+        
+        {/* Seta direita */}
+        <button
+          onClick={next}
+          className="bg-black/80 backdrop-blur-sm hover:bg-[#FF9025] text-white border border-white/20 shadow-xl rounded-full w-10 h-10 flex items-center justify-center transition-all duration-300"
+          aria-label="Próximo"
+        >
+          <IoChevronForward className="w-5 h-5" />
+        </button>
+      </div>
+      
+      {/* Indicadores modernos para desktop */}
+      <div className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 gap-4 z-30">
+        <div className="flex items-center gap-4 bg-black/30 backdrop-blur-md rounded-2xl px-4 py-3 border border-white/20 shadow-2xl">
+          {slides.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => goTo(idx)}
+              className="group relative"
+              aria-label={`Ir para slide ${idx + 1}`}
+            >
+              {/* Indicador principal */}
+              <div className={`relative w-4 h-4 rounded-full transition-all duration-700 ease-out ${
+                current === idx 
+                  ? 'scale-150' 
+                  : 'scale-100'
+              }`}>
+                {/* Círculo de fundo com gradiente */}
+                <div className={`absolute inset-0 rounded-full transition-all duration-500 ${
+                  current === idx 
+                    ? 'bg-gradient-to-r from-[#FF9025] to-[#FF6B35] shadow-lg shadow-[#FF9025]/40' 
+                    : 'bg-white/40 group-hover:bg-white/60'
+                }`} />
+                
+                {/* Efeito de pulso para o ativo */}
+                {current === idx && (
+                  <>
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#FF9025] to-[#FF6B35] animate-ping opacity-75" />
+                    <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-[#FF9025]/30 to-[#FF6B35]/30 blur-sm animate-pulse" />
+                  </>
+                )}
+                
+                {/* Círculo interno */}
+                <div className={`absolute inset-1 rounded-full transition-all duration-300 ${
+                  current === idx 
+                    ? 'bg-gradient-to-r from-[#FF9025] to-[#FF6B35]' 
+                    : 'bg-white/80 group-hover:bg-white'
+                }`} />
+              </div>
+              
+              
+            </button>
+          ))}
+        </div>
       </div>
     </section>
   );

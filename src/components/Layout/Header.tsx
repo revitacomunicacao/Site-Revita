@@ -59,14 +59,17 @@ export const Header = () => {
           </div>
         </div>
 
-                 {/* MENU DE NAVEGAÇÃO */}
-         <div
-           className="w-full z-30 py-4"
+        {/* MENU DE NAVEGAÇÃO */}
+        <div
+          className="w-full z-30 py-4"
           style={{
             background: 'rgba(26, 26, 26, 0.95)',
             backdropFilter: 'blur(20px)',
             borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
             boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
+
+            // background: 'linear-gradient(180deg, #0e0e0e 0%, #660042 100%)',
+            // boxShadow: 'none',
           }}
         >
           <div className="flex flex-row justify-center items-center gap-15 max-w-6xl mx-auto w-full px-4">
@@ -83,7 +86,7 @@ export const Header = () => {
                 <NavigationMenuList className="flex flex-row gap-8 items-center justify-center w-full">
                   <NavigationMenuItem>
                     <NavigationMenuLink asChild className="text-gradient-hover whitespace-nowrap">
-                                             <Link to="/agencia" className="text-[18px]">
+                      <Link to="/agencia" className="text-[18px]">
                         A Agência
                       </Link>
                     </NavigationMenuLink>
@@ -91,7 +94,7 @@ export const Header = () => {
 
                   <NavigationMenuItem>
                     <NavigationMenuTrigger className="bg-[#11111100] text-gradient-hover">
-                                             <Link to={"/servicos"} className="text-[18px]">
+                      <Link to={"/servicos"} className="text-[18px]">
                         Serviços
                       </Link>
                     </NavigationMenuTrigger>
@@ -137,7 +140,7 @@ export const Header = () => {
 
                   <NavigationMenuItem>
                     <NavigationMenuLink asChild className="text-gradient-hover">
-                                             <Link to="/portfolio" className="text-[18px]">
+                      <Link to="/portfolio" className="text-[18px]">
                         Portfolio
                       </Link>
                     </NavigationMenuLink>
@@ -145,7 +148,7 @@ export const Header = () => {
 
                   <NavigationMenuItem>
                     <NavigationMenuLink asChild className="text-gradient-hover">
-                                             <Link to="/contato" className="text-[18px]">
+                      <Link to="/contato" className="text-[18px]">
                         Contato
                       </Link>
                     </NavigationMenuLink>
@@ -153,7 +156,7 @@ export const Header = () => {
 
                   <NavigationMenuItem>
                     <NavigationMenuLink asChild className="text-gradient-hover">
-                                             <Link to="/blog" className="text-[18px]">
+                      <Link to="/blog" className="text-[18px]">
                         Blog
                       </Link>
                     </NavigationMenuLink>
@@ -162,22 +165,20 @@ export const Header = () => {
               </NavigationMenu>
             </nav>
             <div className="flex-shrink-0">
-                             <button className="rounded-full bg-secondary px-5 flex gap-2 items-center hover:bg-white hover:text-secondary cursor-pointer py-1 text-base">
-                 Fale Conosco
-                 <HiOutlineChatBubbleOvalLeftEllipsis size={20} />
+              <button className="rounded-full bg-secondary px-5 flex gap-2 items-center hover:bg-white hover:text-secondary cursor-pointer py-1 text-base">
+                Fale Conosco
+                <HiOutlineChatBubbleOvalLeftEllipsis size={20} />
               </button>
             </div>
           </div>
         </div>
 
-        {/* Espaçador removido - header não é mais fixo */}
       </div>
 
-      {/* HEADER MOBILE */}
       <div className="sm:hidden">
-        {/* Header Mobile */}
-                 <div
-           className="w-full z-40 py-4"
+        {/* header mob */}
+        <div
+          className="w-full z-40 py-4"
           style={{
             background: 'rgba(26, 26, 26, 0.9)',
             backdropFilter: 'blur(20px)',
@@ -189,31 +190,31 @@ export const Header = () => {
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link to="/">
-                                 <img
-                   src={logo}
-                   alt="logo"
-                   className="h-12 w-auto"
-                 />
+                <img
+                  src={logo}
+                  alt="logo"
+                  className="h-12 w-auto"
+                />
               </Link>
             </div>
 
-            {/* Menu Hambúrguer */}
+            {/* menu mob */}
             <Sheet>
               <SheetTrigger asChild>
                 <button className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors duration-200">
                   <Menu className="h-6 w-6 text-white" />
                 </button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] bg-[#0e0e0e] border-l border-[#660042]">
-                <SheetHeader className="border-b border-[#660042] pb-4">
+              <SheetContent side="right" className="w-[260px] sm:w-[280px] md:w-[300px] bg-[#0e0e0e] border-l border-[#660042] z-[5000]">
+                <SheetHeader className="border-b border-[#660042] pb-4 rounded-3xl">
                   <SheetTitle className="text-white text-left">
                     <img src={logo} alt="logo" className="h-8 w-auto" />
                   </SheetTitle>
                 </SheetHeader>
 
                 {/* Menu de Navegação */}
-                <ScrollArea className="h-[calc(100vh-120px)]">
-                  <div className="flex flex-col space-y-6 mt-6 px-4 pb-6">
+                <ScrollArea className="h-[calc(100vh-120px)] pr-4">
+                  <div className="flex flex-col space-y-6 mt-6 px-4 pb-24">
                     {/* Links Principais */}
                     <div className="space-y-4">
                       <h3 className="text-[#FF9025] font-semibold text-sm uppercase tracking-wider">Menu</h3>
@@ -300,9 +301,9 @@ export const Header = () => {
                     <div className="space-y-4">
                       <h3 className="text-[#FF9025] font-semibold text-sm uppercase tracking-wider">Contato</h3>
                       <div className="space-y-3">
-                        <div className="flex items-center gap-3 text-white">
-                          <Mail className="text-[#FF9025] text-lg" />
-                          <span className="text-sm">contato@revitacomunicacao.com.br</span>
+                        <div className="flex items-start gap-3 text-white">
+                          <Mail className="text-[#FF9025] text-lg mt-1 flex-shrink-0" />
+                          <span className="text-xs break-all leading-relaxed">contato@revitacomunicacao.com.br</span>
                         </div>
                         <div className="flex items-center gap-3 text-white">
                           <Phone className="text-[#FF9025] text-lg" />
@@ -335,7 +336,7 @@ export const Header = () => {
                     </div>
 
                     {/* Botão CTA */}
-                    <div className="pt-4 border-t border-[#660042]">
+                    <div className="pt-4 border-t border-[#660042] pb-6">
                       <SheetClose asChild>
                         <button className="w-full rounded-full bg-[#FF9025] text-[#660042] font-bold py-3 px-6 flex items-center justify-center gap-2 hover:bg-white hover:text-[#FF9025] transition-all duration-300">
                           Fale Conosco
