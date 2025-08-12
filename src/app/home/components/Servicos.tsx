@@ -102,7 +102,7 @@ export const Servicos = () => {
         <div className="w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-6 relative z-20">
           {services.map((service, idx) => (
             <AnimatedElement key={service.name} animation="scale-in" delay={500 + (idx * 100)}>
-              <Card className="group bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 hover:border-[#FF9025]/60 shadow-xl hover:shadow-[#FF9025]/20 transition-all duration-500 rounded-2xl p-0 overflow-hidden cursor-pointer h-[420px] relative">
+              <Card className="group bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 hover:border-[#FF9025]/60 shadow-xl hover:shadow-[#FF9025]/20 transition-all duration-500 rounded-2xl p-0 overflow-hidden cursor-pointer sm:h-[420px] relative">
                 {/* Efeito de brilho no hover */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#FF9025]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 

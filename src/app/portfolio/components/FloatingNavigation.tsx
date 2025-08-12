@@ -116,7 +116,7 @@ export const FloatingNavigation: React.FC<FloatingNavigationProps> = ({ onCatego
 
   return (
     <TooltipProvider>
-      <div className="fixed right-6 top-1/2 transform -translate-y-1/2 z-[9999] space-y-3">
+      <div className="fixed right-6 top-1/2 transform -translate-y-1/2 z-[9999] space-y-3 hidden md:block">
         {categories.map((category, index) => {
           const IconComponent = category.icon
           const isActive = activeCategory === category.id

@@ -11,7 +11,7 @@ interface ProjectDrawerProps {
   onClose: () => void
 }
 
-// Função para extrair o ID do vídeo do YouTube
+// extraindo ID do vidoe
 const getYouTubeVideoId = (url: string): string | null => {
   const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/
   const match = url.match(regExp)
@@ -39,7 +39,7 @@ export const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
   return (
     <Drawer open={isOpen} onOpenChange={onClose}>
       <DrawerContent className="bg-gradient-to-b from-gray-900 to-gray-800 border-t border-gray-700">
-        <ScrollArea className="h-[calc(100vh-80px)] pr-4">
+        <ScrollArea className="h-[calc(100vh-80px)] pr-4 sm:h-fit">
           <div className="mx-auto w-full max-w-[1200px]">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 p-4 md:p-6 lg:p-8 pb-8">
               
@@ -125,7 +125,6 @@ export const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
                     ))}
                   </div>
                 </div>
-                <div className="h-40" />
               </div>
             </div>
           </div>

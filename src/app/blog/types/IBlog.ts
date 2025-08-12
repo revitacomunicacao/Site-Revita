@@ -1,3 +1,10 @@
+export interface ICategory {
+  id: number;
+  name: string;
+  slug: string;
+  featureImage: string;
+}
+
 export interface IBlog {
   id: number;
   title: string;

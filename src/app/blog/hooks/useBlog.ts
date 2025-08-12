@@ -1,5 +1,5 @@
-import { getBlogs, getBlogId } from "../services/getBlog";
-import type { IBlog, IBlogId } from "../types/IBlog";
+import { getBlogs, getBlogId, getCategories } from "../services/getBlog";
+import type { IBlog, IBlogId, ICategory } from "../types/IBlog";
 import { useEffect, useState } from "react";
 
 export const useBlog = () => {
@@ -27,9 +27,23 @@ export const useBlogId = (id: string) => {
       return 
     } 
     getBlogId(id)
-      .then((blogData) => setData(blogData[0] || null))
+      .then(setData)
       .catch(setError)
       .finally(() => setLoading(false))
   },[id])
+  return { data, loading, error }
+}
+
+export const useCategories = () => {
+  const [data, setData] = useState<ICategory[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<Error | null>(null);
+
+  useEffect(() => {
+    getCategories()
+      .then(setData)
+      .catch(setError)
+      .finally(() => setLoading(false))
+  },[])
   return { data, loading, error }
 }
