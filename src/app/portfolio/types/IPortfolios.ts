@@ -3,8 +3,7 @@ export interface IPortfolios {
   title: string; 
   description: string;
   categories: string[];
-  imagem_destaque: string;
-  logo: string;
+  galeria_de_foto: string[];
+  url_do_video: string;
   tags: string[];
-  url_do_video?: string;
 }

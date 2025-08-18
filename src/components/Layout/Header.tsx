@@ -26,6 +26,20 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Link } from "react-router-dom";
 
 export const Header = () => {
+  // Função para rolagem suave com offset
+  const scrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const contactSection = document.getElementById('contato');
+    if (contactSection) {
+      const headerHeight = 120; // Altura aproximada do header
+      const targetPosition = contactSection.offsetTop - headerHeight;
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   return (
     <header className="text-white">
@@ -35,38 +49,52 @@ export const Header = () => {
         <div className="hidden sm:flex justify-center items-center bg-[#0e0e0e]">
           <div className="w-full max-w-6xl flex justify-between py-2 px-4">
             {/* Contato */}
-            <div className="flex gap-4">
+            <div className="flex gap-10">
               <div className="flex items-center gap-2">
                 <Mail className="text-secondary" size={15} />
                 <p className="text-[12px]">contato@revitacomunicacao.com.br</p>
               </div>
-              <div className="flex items-center gap-2">
-                <Phone className="text-secondary" size={15} />
-                <p className="text-[12px]">(34) 99637-4463</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <FaWhatsapp className="text-secondary" size={15} />
-                <p className="text-[12px]">(34) 99637-4463</p>
+              <div className="flex flex-row gap-2">
+                <div className="flex items-center gap-2">
+                  <a href="https://wa.me/5534996374463">
+                    <Phone className="text-secondary" size={15} />
+                  </a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <a href="https://wa.me/5534996374463" className="flex flex-row gap-2
+                  justify-center items-center">
+                    <FaWhatsapp className="text-secondary" size={15} />
+                  <p className="text-[12px]">(34) 99637-4463</p>
+                  </a>
+                </div>
               </div>
             </div>
             {/* Redes Sociais */}
             <div className="flex gap-4">
-              <FaInstagram className="text-2xl hover:text-secondary transition duration-300 ease-in-out" />
-              <FaFacebook className="text-2xl hover:text-secondary transition duration-300 ease-in-out" />
-              <FaLinkedin className="text-2xl hover:text-secondary transition duration-300 ease-in-out" />
-              <FaWhatsapp className="text-2xl hover:text-secondary transition duration-300 ease-in-out" />
+              <a href="https://www.instagram.com/revita.comunicacao/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition duration-300 ease-in-out">
+                <FaInstagram className="text-2xl" />
+              </a>
+              <a href="https://www.facebook.com/people/Revita-Comunica%C3%A7%C3%A3o/61571725990042/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition duration-300 ease-in-out">
+                <FaFacebook className="text-2xl" />
+              </a>
+              <a href="https://www.linkedin.com/company/revita-comunicacao?originalSubdomain=br" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition duration-300 ease-in-out">
+                <FaLinkedin className="text-2xl" />
+              </a>
+              <a href="https://wa.me/5534996374463" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition duration-300 ease-in-out">
+                <FaWhatsapp className="text-2xl" />
+              </a>
             </div>
           </div>
         </div>
 
         {/* MENU DE NAVEGAÇÃO */}
         <div
-          className="w-full z-30 py-4"
+          className="w-full z-30 py-4 bg-[#660042]"
           style={{
-            background: 'rgba(26, 26, 26, 0.95)',
-            backdropFilter: 'blur(20px)',
-            borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-            boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
+            // background: 'rgba(26, 26, 26, 0.95)',
+            // backdropFilter: 'blur(20px)',
+            // borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+            // boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
 
             // background: 'linear-gradient(180deg, #0e0e0e 0%, #660042 100%)',
             // boxShadow: 'none',
@@ -95,7 +123,7 @@ export const Header = () => {
                   <NavigationMenuItem>
                     <NavigationMenuTrigger className="bg-[#11111100] text-gradient-hover">
                       <Link to={"/servicos"} className="text-[18px]">
-                        Serviços
+                        Soluções
                       </Link>
                     </NavigationMenuTrigger>
                     <NavigationMenuContent className="p-0 border-none ">
@@ -148,9 +176,9 @@ export const Header = () => {
 
                   <NavigationMenuItem>
                     <NavigationMenuLink asChild className="text-gradient-hover">
-                      <Link to="/contato" className="text-[18px]">
+                      <a href="#contato" onClick={scrollToContact} className="text-[18px] cursor-pointer">
                         Contato
-                      </Link>
+                      </a>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
 
@@ -178,7 +206,7 @@ export const Header = () => {
       <div className="sm:hidden">
         {/* header mob */}
         <div
-          className="w-full z-40 py-4"
+          className="w-full z-[230001] py-4"
           style={{
             background: 'rgba(26, 26, 26, 0.9)',
             backdropFilter: 'blur(20px)',
@@ -205,7 +233,7 @@ export const Header = () => {
                   <Menu className="h-6 w-6 text-white" />
                 </button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[260px] sm:w-[280px] md:w-[300px] bg-[#0e0e0e] border-l border-[#660042] z-[5000]">
+              <SheetContent side="right" className="w-[260px] sm:w-[280px] md:w-[300px] bg-[#0e0e0e] border-l border-[#660042] z-[50200]">
                 <SheetHeader className="border-b border-[#660042] pb-4 rounded-3xl">
                   <SheetTitle className="text-white text-left">
                     <img src={logo} alt="logo" className="h-8 w-auto" />
@@ -230,9 +258,9 @@ export const Header = () => {
                           </Link>
                         </SheetClose>
                         <SheetClose asChild>
-                          <Link to="/contato" className="block text-white hover:text-[#FF9025] transition-colors duration-200 py-2 text-lg">
+                          <a href="#contato" onClick={scrollToContact} className="block text-white hover:text-[#FF9025] transition-colors duration-200 py-2 text-lg cursor-pointer">
                             Contato
-                          </Link>
+                          </a>
                         </SheetClose>
                         <SheetClose asChild>
                           <Link to="/blog" className="block text-white hover:text-[#FF9025] transition-colors duration-200 py-2 text-lg">
@@ -242,9 +270,9 @@ export const Header = () => {
                       </div>
                     </div>
 
-                    {/* Serviços */}
+                    {/* Soluções */}
                     <div className="space-y-4">
-                      <h3 className="text-[#FF9025] font-semibold text-sm uppercase tracking-wider">Serviços</h3>
+                      <h3 className="text-[#FF9025] font-semibold text-sm uppercase tracking-wider">Soluções</h3>
                       <div className="space-y-3">
                         <SheetClose asChild>
                           <Link to="/servicos#branding-medico" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
@@ -309,10 +337,12 @@ export const Header = () => {
                           <Phone className="text-[#FF9025] text-lg" />
                           <span className="text-sm">(34) 99637-4463</span>
                         </div>
-                        <div className="flex items-center gap-3 text-white">
-                          <FaWhatsapp className="text-[#FF9025] text-lg" />
-                          <span className="text-sm">(34) 99637-4463</span>
-                        </div>
+                                                 <div className="flex items-center gap-3 text-white">
+                           <a href="https://wa.me/5534996374463" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200">
+                             <FaWhatsapp className="text-[#FF9025] text-lg" />
+                             <span className="text-sm">(34) 99637-4463</span>
+                           </a>
+                         </div>
                       </div>
                     </div>
 
@@ -320,16 +350,16 @@ export const Header = () => {
                     <div className="space-y-4">
                       <h3 className="text-[#FF9025] font-semibold text-sm uppercase tracking-wider">Redes Sociais</h3>
                       <div className="flex gap-4">
-                        <a href="#" className="text-white hover:text-[#FF9025] transition-colors duration-200">
+                        <a href="https://www.instagram.com/revita.comunicacao/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#FF9025] transition-colors duration-200">
                           <FaInstagram className="text-2xl" />
                         </a>
-                        <a href="#" className="text-white hover:text-[#FF9025] transition-colors duration-200">
+                        <a href="https://www.facebook.com/people/Revita-Comunica%C3%A7%C3%A3o/61571725990042/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#FF9025] transition-colors duration-200">
                           <FaFacebook className="text-2xl" />
                         </a>
-                        <a href="#" className="text-white hover:text-[#FF9025] transition-colors duration-200">
+                        <a href="https://www.linkedin.com/company/revita-comunicacao?originalSubdomain=br" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#FF9025] transition-colors duration-200">
                           <FaLinkedin className="text-2xl" />
                         </a>
-                        <a href="#" className="text-white hover:text-[#FF9025] transition-colors duration-200">
+                        <a href="https://wa.me/+5534996374465" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#FF9025] transition-colors duration-200">
                           <FaWhatsapp className="text-2xl" />
                         </a>
                       </div>

@@ -15,10 +15,10 @@ export default function Servicos() {
   return (
     <>
       <PageHeader 
-        title="Nossos Serviços"
+        title="Nossas Soluções"
         subtitle="Somos autoridade em marketing para Clínicas Médicas e temos expertise em oferecer soluções completas para aumentar a confiança dos pacientes, gerar mais consultas e posicionar sua clínica como referência no setor."
         breadcrumb={[
-          { label: "Nossos Serviços", href: "/servicos" }
+          { label: "Nossas Soluções", href: "/servicos" }
         ]}
         highlightWords={["Agência", "Marketing", "Clínicas"]}
       />

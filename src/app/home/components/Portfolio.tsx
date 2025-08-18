@@ -27,7 +27,7 @@ export const Portfolio = () => {
           </div>
         </AnimatedElement>
         <AnimatedElement animation="slide-up" delay={300}>
-          <h1 className="text-3xl sm:text-5xl md:text-[90px] leading-snug text-white font-bold text-center md:text-left">
+          <h1 className="text-3xl sm:text-5xl md:text-[90px] text-white font-bold text-center md:text-left">
             Cases de <br />
             <span className="shimmer-gradient">
               Sucesso

@@ -37,16 +37,16 @@ export const Institutional = () => {
             <div className="space-y-4">
               <AnimatedElement animation="slide-down" delay={200}>
                 <span className="inline-block px-4 py-2 bg-[#FF9025]/20 text-[#FF9025] text-sm font-semibold rounded-full border border-[#FF9025]/30">
-                  Especialistas em Clínicas
+                  Especialistas em Clínicas Médicas
                 </span>
               </AnimatedElement>
               <AnimatedElement animation="slide-up" delay={300}>
-                <h2 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
-                  Marketing Digital{" "}
+                <h2 className="text-4xl lg:text-[56px] font-bold text-white leading-tight">
+                  Marketing digital{" "}
                   <span className="shimmer-gradient">
-                    Especializado
+                    especializado
                   </span>{" "}
-                  para Clínicas
+                  para Clínicas Médicas
                 </h2>
               </AnimatedElement>
             </div>

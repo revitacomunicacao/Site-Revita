@@ -51,25 +51,30 @@ export const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
                   </DrawerTitle>
                 </div>
                 
-                {/* Imagem destacada ou Vídeo */}
-                <div className="relative w-full h-48 md:h-64 lg:h-80 rounded-xl overflow-hidden">
+                {/* Galeria de fotos ou Vídeo */}
+                <div className="relative w-full space-y-4">
                   {isVideo && videoId ? (
-                    <iframe
-                      src={`https://www.youtube.com/embed/${videoId}`}
-                      title={project.title}
-                      className="w-full h-full"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  ) : (
-                    <>
-                      <img
-                        src={project.imagem_destaque}
-                        alt={project.title}
-                        className="w-full h-full object-cover"
+                    <div className="h-48 md:h-64 lg:h-80 rounded-xl overflow-hidden">
+                      <iframe
+                        src={`https://www.youtube.com/embed/${videoId}`}
+                        title={project.title}
+                        className="w-full h-full"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    </>
+                    </div>
+                  ) : (
+                    <div className="grid grid-cols-3 gap-2 md:gap-3">
+                      {project.galeria_de_foto.map((foto, fotoIdx) => (
+                        <div key={fotoIdx} className="rounded-lg overflow-hidden">
+                          <img
+                            src={foto}
+                            alt={`${project.title} - Foto ${fotoIdx + 1}`}
+                            className="w-full h-auto object-cover"
+                          />
+                        </div>
+                      ))}
+                    </div>
                   )}
                 </div>
               </div>
@@ -128,6 +133,8 @@ export const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
               </div>
             </div>
           </div>
+
+          <div className="flex sm:hidden h-40" />
         </ScrollArea>
       </DrawerContent>
     </Drawer>

@@ -5,7 +5,7 @@ import iconRevita from "@/assets/iconeDevRevita.png";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#0e0e0e] text-white relative overflow-hidden">
+    <footer id="contato" className="bg-[#0e0e0e] text-white relative overflow-hidden">
       {/* Gradiente de fundo */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#660042]/20 via-[#0e0e0e] to-[#0e0e0e]" />
       
@@ -35,16 +35,16 @@ export const Footer = () => {
                 </div>
               </div>
               <div className="flex gap-3 sm:gap-4">
-                <a href="#" className="w-8 h-8 sm:w-10 sm:h-10 bg-[#660042] rounded-full flex items-center justify-center hover:bg-secondary transition-colors duration-300">
+                <a href="https://www.instagram.com/revita.comunicacao/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 bg-[#660042] rounded-full flex items-center justify-center hover:bg-secondary transition-colors duration-300">
                   <FaInstagram className="text-white text-sm sm:text-base" />
                 </a>
-                <a href="#" className="w-8 h-8 sm:w-10 sm:h-10 bg-[#660042] rounded-full flex items-center justify-center hover:bg-secondary transition-colors duration-300">
+                <a href="https://www.facebook.com/people/Revita-Comunica%C3%A7%C3%A3o/61571725990042/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 bg-[#660042] rounded-full flex items-center justify-center hover:bg-secondary transition-colors duration-300">
                   <FaFacebook className="text-white text-sm sm:text-base" />
                 </a>
-                <a href="#" className="w-8 h-8 sm:w-10 sm:h-10 bg-[#660042] rounded-full flex items-center justify-center hover:bg-secondary transition-colors duration-300">
+                <a href="https://www.linkedin.com/company/revita-comunicacao?originalSubdomain=br" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 bg-[#660042] rounded-full flex items-center justify-center hover:bg-secondary transition-colors duration-300">
                   <FaLinkedin className="text-white text-sm sm:text-base" />
                 </a>
-                <a href="#" className="w-8 h-8 sm:w-10 sm:h-10 bg-[#660042] rounded-full flex items-center justify-center hover:bg-secondary transition-colors duration-300">
+                <a href="https://wa.me/5534996374463" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 bg-[#660042] rounded-full flex items-center justify-center hover:bg-secondary transition-colors duration-300">
                   <FaWhatsapp className="text-white text-sm sm:text-base" />
                 </a>
               </div>
@@ -140,16 +140,13 @@ export const Footer = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Phone className="text-secondary mt-1 flex-shrink-0" size={16} />
-                  <div>
-                    <p className="text-white/70 text-sm">(34) 99637-4463</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <FaWhatsapp className="text-secondary mt-1 flex-shrink-0" size={16} />
-                  <div>
-                    <p className="text-white/70 text-sm">(34) 99637-4463</p>
-                  </div>
+                  <a href="https://wa.me/5534996374463" className="flex flex-row gap-2">
+                    <Phone className="text-secondary mt-1 flex-shrink-0" size={16} />
+                    <FaWhatsapp className="text-secondary mt-1 flex-shrink-0" size={16} />
+                    <div>
+                      <p className="text-white/70 text-sm">(34) 99637-4463</p>
+                    </div>
+                  </a>
                 </div>
                 <div className="flex items-start gap-3">
                   <MapPin className="text-secondary mt-1 flex-shrink-0" size={16} />
@@ -180,14 +177,8 @@ export const Footer = () => {
               © 2025 Revita Comunicação. Todos os direitos reservados.
             </p>
             <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6 text-xs sm:text-sm">
-              <a href="/termos" className="text-white/60 hover:text-secondary transition-colors duration-300">
-                Termos de Uso
-              </a>
               <a href="/privacidade" className="text-white/60 hover:text-secondary transition-colors duration-300">
                 Política de Privacidade
-              </a>
-              <a href="/cookies" className="text-white/60 hover:text-secondary transition-colors duration-300">
-                Cookies
               </a>
             </div>
           </div>

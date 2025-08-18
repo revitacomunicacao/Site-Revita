@@ -4,8 +4,12 @@ import routes from 'virtual:generated-pages-react'
 import './index.css'
 import { Header } from './components/Layout/Header'
 import { Footer } from './components/Layout/Footer'
+import { FloatingHeader } from './components/Layout/FloatingHeader'
+import { useScrollToTop } from './hooks/useScrollToTop'
 
 function App() {
+  // Hook para scroll automático ao topo em mudanças de rota
+  useScrollToTop();
 
   return useRoutes(routes)
 }
@@ -13,6 +17,7 @@ function App() {
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <BrowserRouter basename="/desenvolvimento/revita">
     <Header />
+    <FloatingHeader />
     <App />
     <Footer />
   </BrowserRouter>

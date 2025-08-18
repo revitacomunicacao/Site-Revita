@@ -10,7 +10,7 @@ export default function Agencia() {
     <main>
       <PageHeader 
         title="A Agência"
-        subtitle="Somos autoridade em marketing para Clínicas Médicas e temos expertise em oferecer soluções completas para aumentar a confiança dos pacientes, gerar mais consultas e posicionar sua clínica como referência no setor."
+        subtitle="Somos autoridade em marketing digital para Clínicas Médicas e temos expertise em oferecer soluções completas para aumentar a confiança dos pacientes, gerar mais consultas e posicionar sua clínica como referência no setor."
         breadcrumb={[
           { label: "A Agência", href: "/agencia" }
         ]}

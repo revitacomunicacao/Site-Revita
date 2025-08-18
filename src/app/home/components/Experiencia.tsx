@@ -59,14 +59,14 @@ export const Experiencia = () => {
           <AnimatedElement animation="slide-up" delay={300}>
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
               <span className="shimmer-gradient">
-                Experiência
+                Experiências
               </span>{" "}
-              que Transforma Clínicas
+              que transformam Clínicas Médicas
             </h2>
           </AnimatedElement>
           <AnimatedElement animation="slide-up" delay={400}>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Mais de duas décadas dedicadas à excelência em marketing digital para clínicas médicas
+              Mais de duas décadas dedicadas à excelência em marketing digital
             </p>
           </AnimatedElement>
         </AnimatedElement>

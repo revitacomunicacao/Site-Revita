@@ -156,19 +156,19 @@ export default function BlogDetails() {
         </div>
 
         {/* Card branco sobreposto */}
-        <div className="w-full max-w-[1200px] mx-4 md:mx-6 mt-[-80px] md:mt-[-120px] lg:mt-[-150px] bg-white rounded-2xl md:rounded-[32px] p-6 md:p-8 lg:p-10 shadow-xl">
+        <div className="w-full max-w-[1200px] mx-4 md:mx-6 mt-[-80px] md:mt-[-120px] lg:mt-[-420px] bg-white rounded-2xl md:rounded-[32px] p-6 md:p-8 lg:p-10 shadow-xl">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6 leading-tight">{blog.title}</h1>
           
           {/* Linha divisória amarela */}
           <div className="h-[1px] bg-[#f4b414] w-full my-6 md:my-8 lg:my-10" />
           
           {/* Metadados do post */}
-          <div className="flex flex-col sm:flex-row justify-between gap-3 sm:gap-0 mb-6 md:mb-8 text-sm text-gray-600">
+          {/* <div className="flex flex-col sm:flex-row justify-between gap-3 sm:gap-0 mb-6 md:mb-8 text-sm text-gray-600">
             <span className="text-gray-700 text-center sm:text-left">
               Por: <strong className="text-gray-900">{blog.author}</strong> | {formatDate(blog.postingDate)}
             </span>
             <span className="text-gray-700 font-medium text-center sm:text-right">{blog.readingTime} min de leitura</span>
-          </div>
+          </div> */}
           
           {/* Conteúdo do post */}
           <div className="prose prose-sm md:prose-lg max-w-none text-gray-800 leading-relaxed prose-headings:text-gray-900 prose-p:text-gray-700 prose-strong:text-gray-900 prose-a:text-[#f4b414] prose-a:no-underline hover:prose-a:underline" dangerouslySetInnerHTML={{ __html: blog.content }} />

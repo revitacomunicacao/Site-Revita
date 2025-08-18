@@ -104,11 +104,8 @@ export const GaleriaAgencia = () => {
 
         <AnimatedElement animation="slide-up" delay={700}>
           <div className="text-center mt-12">
-            <p className="text-white/60 text-lg">
-              Venha conhecer nossa equipe e nosso ambiente de trabalho!
-            </p>
-            <button className="mt-6 bg-[#FF9025] text-black font-semibold px-8 py-3 rounded-full hover:bg-[#FF9025]/90 transition-all duration-300">
-              Agende uma visita
+            <button className="mt-6 bg-[#FF9025] text-black font-semibold px-8 py-3 rounded-full hover:bg-[#FF9025]/90 transition-all duration-300 cursor-pointer">
+              Agendar atendimento
             </button>
           </div>
         </AnimatedElement>

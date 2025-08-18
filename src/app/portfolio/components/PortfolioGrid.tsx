@@ -158,44 +158,48 @@ export const PortfolioGrid: React.FC = () => {
 
               {/* Grid de projetos na largura total com informações */}
               {projects.length > 0 && (
-                <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0">
+                <div className="w-full space-y-12">
                   {projects.map((project, idx) => (
                     <div
                       key={project.id}
                       className="relative group cursor-pointer select-none overflow-hidden"
                       onClick={() => handleProjectClick(project)}
                     >
-                      {/* Imagem de fundo preenchendo todo o bloco */}
-                      <div className="aspect-square relative">
-                        <img
-                          src={project.imagem_destaque}
-                          alt={project.title}
-                          className="absolute inset-0 w-full h-full object-cover object-center"
-                          draggable={false}
-                        />
-                        {/* Overlay escuro */}
-                        <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 transition-all duration-300 z-10" />
-                        {/* Ícone de olho no hover */}
-                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-                          <Eye className="w-8 h-8 text-white" />
-                        </div>
+                      {/* Grid de 3 fotos por projeto */}
+                      <div className="grid grid-cols-3 gap-0">
+                        {project.galeria_de_foto.map((foto, fotoIdx) => (
+                          <div key={fotoIdx} className="relative">
+                            <img
+                              src={foto}
+                              alt={`${project.title} - Foto ${fotoIdx + 1}`}
+                              className="w-full h-auto object-cover object-center"
+                              draggable={false}
+                            />
+                            {/* Overlay escuro */}
+                            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 transition-all duration-300 z-10" />
+                            {/* Ícone de olho no hover */}
+                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+                              <Eye className="w-8 h-8 text-white" />
+                            </div>
+                          </div>
+                        ))}
                       </div>
                       
-                      {/* Informações do projeto abaixo da imagem - altura fixa */}
-                      <div className="bg-gray-800/90 p-4 border-t border-gray-700 h-42 flex flex-col justify-between">
-                        <div>
-                          <h3 className="text-white font-semibold text-lg mb-2 line-clamp-1">
-                            {project.title}
-                          </h3>
-                          <p className="text-gray-300 text-sm line-clamp-2">
+                      {/* Informações do projeto abaixo das fotos - centralizadas */}
+                      <div className="bg-gray-800/90 p-6 border-t border-gray-700 text-center">
+                        <h3 className="text-white font-semibold text-xl mb-3">
+                          {project.title}
+                        </h3>
+                        {project.description && (
+                          <p className="text-gray-300 text-base mb-4 max-w-2xl mx-auto">
                             {project.description}
                           </p>
-                        </div>
-                        <div className="flex flex-wrap gap-1 mt-2">
-                          {project.categories.slice(0, 2).map((category, index) => (
+                        )}
+                        <div className="flex flex-wrap gap-2 justify-center">
+                          {project.categories.map((category, index) => (
                             <Badge
                               key={index}
-                              className="bg-secondary/20 text-secondary text-xs px-2 py-1"
+                              className="bg-secondary/20 text-secondary text-sm px-3 py-1"
                             >
                               {category}
                             </Badge>
