@@ -97,7 +97,7 @@ export const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
                 {/* Categorias */}
                 <div className="text-left">
                   <h3 className="text-lg md:text-xl font-semibold text-white mb-3 md:mb-4">
-                    Categorias
+                    Categoria
                   </h3>
                   <div className="flex flex-wrap gap-2 md:gap-3">
                     {project.categories.map((category, index) => (
@@ -106,26 +106,6 @@ export const ProjectDrawer: React.FC<ProjectDrawerProps> = ({
                         className="bg-secondary text-[#1a1a1a] hover:bg-amber-400 transition-colors duration-300 text-sm md:text-base px-3 md:px-4 py-1 md:py-2"
                       >
                         {category}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-
-                <Separator className="bg-gray-700" />
-
-                {/* Tags */}
-                <div className="text-left">
-                  <h3 className="text-lg md:text-xl font-semibold text-white mb-3 md:mb-4">
-                    Tags
-                  </h3>
-                  <div className="flex flex-wrap gap-2 md:gap-3">
-                    {project.tags.map((tag, index) => (
-                      <Badge
-                        key={index}
-                        variant="outline"
-                        className="border-gray-600 text-gray-300 hover:bg-gray-700 transition-colors duration-300 text-sm md:text-base px-3 md:px-4 py-1 md:py-2"
-                      >
-                        {tag}
                       </Badge>
                     ))}
                   </div>
