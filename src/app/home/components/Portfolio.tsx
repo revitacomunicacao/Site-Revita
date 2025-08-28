@@ -3,18 +3,94 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
 import portfolioImg from "@/assets/portfolio.png";
-import logoColorado from "@/assets/logoColorado.png";
 import Trofeu from "@/assets/trofeu.svg";
 import { AnimatedElement } from "@/components/AnimatedElement";
 
-const portfolioData = Array.from({ length: 6 }).map(() => ({
-  name: "Choperia Colorado",
-  site: "https://choperiacolorado.com.br/",
-  logo: logoColorado,
-  bg: portfolioImg,
-  desc: "Clínica especializada em cardiologia que se tornou referência na região. Desenvolvemos estratégias digitais completas para aumentar a confiança dos pacientes e gerar mais consultas.",
-  tags: ["Site Médico", "SEO Médico", "Branding", "Redes Sociais", "Tráfego Pago"],
-}));
+import colorado1 from "@/assets/portfolioHome/colorado1.png"
+import colorado2 from "@/assets/portfolioHome/colorado2.png"
+import colorado3 from "@/assets/portfolioHome/colorado3.png"
+
+import dicasa1 from "@/assets/portfolioHome/dicasa1.png"
+import dicasa2 from "@/assets/portfolioHome/dicasa2.png"
+import dicasa3 from "@/assets/portfolioHome/dicasa3.png"
+
+import cxx1 from "@/assets/portfolioHome/cxx01.png"
+import cxx2 from "@/assets/portfolioHome/cxx02.png"
+import cxx3 from "@/assets/portfolioHome/cxx03.png"
+
+const portfolioData = [
+  {
+    name: "Choperia Colorado",
+    site: "https://choperiacolorado.com.br/",
+    bg: colorado1,
+    desc: "",
+    tags: ["REBRANDING", "DESIGN", "TRÁFEGO PAGO", "CARDÁPIO", "ESTRATÉGIAS MARKETING", "DESENVOLVIVENTO WEB"],
+  },
+  {
+    name: "Choperia Colorado",
+    site: "https://choperiacolorado.com.br/",
+    bg: colorado2,
+    desc: "",
+    tags: ["REBRANDING", "DESIGN", "TRÁFEGO PAGO", "CARDÁPIO", "ESTRATÉGIAS MARKETING", "DESENVOLVIVENTO WEB"],
+  },
+  {
+    name: "Choperia Colorado",
+    site: "https://choperiacolorado.com.br/",
+    bg: colorado3,
+    desc: "",
+    tags: ["REBRANDING", "DESIGN", "TRÁFEGO PAGO", "CARDÁPIO", "ESTRATÉGIAS MARKETING", "DESENVOLVIVENTO WEB"],
+  },
+
+
+
+
+
+  {
+    name: "Dicasa & Campo",
+    site: "https://dicasaecampo.com.br/",
+    bg: dicasa1,
+    desc: "",
+    tags: ["DESIGN", "TRÁGEFO PAGO", "DESENVOLVIVENTO WEB", "ESTRATÉGIAS MARKETING"],
+  },
+  {
+    name: "Dicasa & Campo",
+    site: "https://dicasaecampo.com.br/",
+    bg: dicasa2,
+    desc: "",
+    tags: ["DESIGN", "TRÁGEFO PAGO", "DESENVOLVIVENTO WEB", "ESTRATÉGIAS MARKETING"],
+  },
+  {
+    name: "Dicasa & Campo",
+    site: "https://dicasaecampo.com.br/",
+    bg: dicasa3,
+    desc: "",
+    tags: ["DESIGN", "TRÁGEFO PAGO", "DESENVOLVIVENTO WEB", "ESTRATÉGIAS MARKETING"],
+  },
+
+
+
+  {
+    name: "Rede Caxuxa Triangulo",
+    site: "https://redecaxuxatriangulo.com.br/",
+    bg: cxx1,
+    desc: "",
+    tags: ["DESIGN", "TRÁGEFO PAGO", "DESENVOLVIVENTO WEB", "ESTRATÉGIAS MARKETING"],
+  },
+  {
+    name: "Rede Caxuxa Triangulo",
+    site: "https://redecaxuxatriangulo.com.br/",
+    bg: cxx2,
+    desc: "",
+    tags: ["DESIGN", "TRÁGEFO PAGO", "DESENVOLVIVENTO WEB", "ESTRATÉGIAS MARKETING"],
+  },
+  {
+    name: "Rede Caxuxa Triangulo",
+    site: "https://redecaxuxatriangulo.com.br/",
+    bg: cxx3,
+    desc: "",
+    tags: ["DESIGN", "TRÁGEFO PAGO", "DESENVOLVIVENTO WEB", "ESTRATÉGIAS MARKETING"],
+  },
+]
 
 export const Portfolio = () => {
   return (
@@ -42,17 +118,16 @@ export const Portfolio = () => {
       </AnimatedElement>
 
       {/* Grid colado de portfólio */}
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {portfolioData.map((item, idx) => (
           <AnimatedElement key={idx} animation="scale-in" delay={500 + (idx * 100)}>
             <Dialog>
               <DialogTrigger asChild>
-                <div className="relative group aspect-square w-full cursor-pointer select-none overflow-hidden">
+                <div className="relative group w-full cursor-pointer select-none overflow-hidden">
                   {/* Imagem de fundo preenchendo todo o bloco */}
                   <img
                     src={item.bg}
                     alt={item.name}
-                    className="absolute inset-0 w-full h-full object-cover object-center"
                     draggable={false}
                   />
                   {/* Overlay escuro */}
@@ -70,7 +145,6 @@ export const Portfolio = () => {
               <DialogContent className="max-w-lg bg-[#181828] border-[#FF9025] text-white rounded-2xl shadow-2xl">
                 <DialogHeader>
                   <DialogTitle className="flex items-center gap-3 text-2xl">
-                    <img src={item.logo} alt={item.name} className="h-10 w-10 object-contain rounded-lg bg-white p-1" />
                     {item.name}
                   </DialogTitle>
                   <DialogDescription className="text-white/80 mt-2">

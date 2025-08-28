@@ -158,8 +158,8 @@ export const Footer = () => {
                 <div className="flex items-start gap-3">
                   <Clock className="text-secondary mt-1 flex-shrink-0" size={16} />
                   <div>
-                    <p className="text-white/70 text-sm">Seg - Sex: 8h às 18h</p>
-                    <p className="text-white/70 text-sm">Sáb: 8h às 12h</p>
+                    <p className="text-white/70 text-sm">Seg - Qui: 8h30 às 18h</p>
+                    <p className="text-white/70 text-sm">Sex: 8h30 às 17h</p>
                   </div>
                 </div>
               </div>
