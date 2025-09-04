@@ -129,15 +129,15 @@ export const FloatingHeader = () => {
                 <h3 className="text-[#FF9025] font-semibold text-sm uppercase tracking-wider">Soluções</h3>
                 <div className="space-y-3">
                   <SheetClose asChild>
-                    <Link to="/servicos#branding-medico" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                    <Link to="/servicos#branding" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
                       <HiSpeakerphone className="text-purple-700 text-lg" />
-                      <span>Branding Médico</span>
+                      <span>Branding</span>
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
-                    <Link to="/servicos#publicidade-medica" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                    <Link to="/servicos#publicidade" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
                       <FaBoltLightning className="text-yellow-500 text-lg" />
-                      <span>Publicidade Médica</span>
+                      <span>Publicidade</span>
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
@@ -147,9 +147,9 @@ export const FloatingHeader = () => {
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
-                    <Link to="/servicos#sites-medicos" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                    <Link to="/servicos#sites" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
                       <IoDesktop className="text-green-700 text-lg" />
-                      <span>Sites Médicos</span>
+                      <span>Sites</span>
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
@@ -159,21 +159,21 @@ export const FloatingHeader = () => {
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
-                    <Link to="/servicos#seo-medico" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                    <Link to="/servicos#seo" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
                       <HiSpeakerphone className="text-blue-600 text-lg" />
-                      <span>SEO Médico</span>
+                      <span>SEO</span>
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
-                    <Link to="/servicos#conteudo-medico" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                    <Link to="/servicos#conteudo" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
                       <FaPlay className="text-green-600 text-lg" />
-                      <span>Conteúdo Médico</span>
+                      <span>Conteúdo</span>
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
-                    <Link to="/servicos#inbound-medico" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                    <Link to="/servicos#inbound" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
                       <FaRocket className="text-purple-600 text-lg" />
-                      <span>Inbound Médico</span>
+                      <span>Inbound</span>
                     </Link>
                   </SheetClose>
                 </div>
@@ -192,7 +192,7 @@ export const FloatingHeader = () => {
                     <span className="text-sm">(34) 99637-4463</span>
                   </div>
                                            <div className="flex items-center gap-3 text-white">
-                           <a href="https://wa.me/5534996374463" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200">
+                           <a href="https://api.whatsapp.com/send/?phone=5534996374463&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200">
                              <FaWhatsapp className="text-[#FF9025] text-lg" />
                              <span className="text-sm">(34) 99637-4463</span>
                            </a>
@@ -213,7 +213,7 @@ export const FloatingHeader = () => {
                   <a href="https://www.linkedin.com/company/revita-comunicacao?originalSubdomain=br" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#FF9025] transition-colors duration-200">
                     <FaLinkedin className="text-2xl" />
                   </a>
-                                     <a href="https://wa.me/5534996374463" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#FF9025] transition-colors duration-200">
+                                     <a href="https://api.whatsapp.com/send/?phone=5534996374463&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#FF9025] transition-colors duration-200">
                      <FaWhatsapp className="text-2xl" />
                    </a>
                 </div>
@@ -222,10 +222,10 @@ export const FloatingHeader = () => {
               {/* Botão CTA */}
               <div className="pt-4 border-t border-[#660042] pb-6">
                 <SheetClose asChild>
-                  <button className="w-full rounded-full bg-[#FF9025] text-[#660042] font-bold py-3 px-6 flex items-center justify-center gap-2 hover:bg-white hover:text-[#FF9025] transition-all duration-300">
+                  <a href="https://api.whatsapp.com/send/?phone=5534996374463&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="w-full rounded-full bg-[#FF9025] text-[#660042] font-bold py-3 px-6 flex items-center justify-center gap-2 hover:bg-white hover:text-[#FF9025] transition-all duration-300">
                     Fale Conosco
                     <HiOutlineChatBubbleOvalLeftEllipsis size={20} />
-                  </button>
+                  </a>
                 </SheetClose>
               </div>
             </div>

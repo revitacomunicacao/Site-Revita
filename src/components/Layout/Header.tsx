@@ -131,12 +131,12 @@ export const Header = () => {
                         <div>
                           <Link to="/servicos#branding-medico" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
                             <HiSpeakerphone className="text-purple-700" />
-                            Branding Médico
+                            Branding
                           </Link>
                         </div>
                         <Link to="/servicos#publicidade-medica" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
                           <FaBoltLightning className="text-yellow-500" />
-                          Publicidade Médica
+                          Publicidade
                         </Link>
                         <Link to="/servicos#redes-sociais" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
                           <FaPlay className="text-cyan-600" />
@@ -144,7 +144,7 @@ export const Header = () => {
                         </Link>
                         <Link to="/servicos#sites-medicos" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
                           <IoDesktop className="text-green-700" />
-                          Sites Médicos
+                          Sites
                         </Link>
                         <Link to="/servicos#trafego-pago" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
                           <FaRocket className="text-amber-700" />
@@ -152,15 +152,15 @@ export const Header = () => {
                         </Link>
                         <Link to="/servicos#seo-medico" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
                           <HiSpeakerphone className="text-blue-600" />
-                          SEO Médico
+                          SEO
                         </Link>
                         <Link to="/servicos#conteudo-medico" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
                           <FaPlay className="text-green-600" />
-                          Conteúdo Médico
+                          Conteúdo
                         </Link>
                         <Link to="/servicos#inbound-medico" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
                           <FaRocket className="text-purple-600" />
-                          Inbound Médico
+                          Inbound
                         </Link>
                       </div>
                     </NavigationMenuContent>
@@ -193,10 +193,12 @@ export const Header = () => {
               </NavigationMenu>
             </nav>
             <div className="flex-shrink-0">
-              <button className="rounded-full bg-secondary px-5 flex gap-2 items-center hover:bg-white hover:text-secondary cursor-pointer py-1 text-base">
-                Fale Conosco
-                <HiOutlineChatBubbleOvalLeftEllipsis size={20} />
-              </button>
+              <Link to={"https://api.whatsapp.com/send/?phone=5534996374463&text&type=phone_number&app_absent=0"}>
+                <button className="rounded-full bg-secondary px-5 flex gap-2 items-center hover:bg-white hover:text-secondary cursor-pointer py-1 text-base">
+                  Fale Conosco
+                  <HiOutlineChatBubbleOvalLeftEllipsis size={20} />
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -275,15 +277,15 @@ export const Header = () => {
                       <h3 className="text-[#FF9025] font-semibold text-sm uppercase tracking-wider">Soluções</h3>
                       <div className="space-y-3">
                         <SheetClose asChild>
-                          <Link to="/servicos#branding-medico" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                          <Link to="/servicos#branding" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
                             <HiSpeakerphone className="text-purple-700 text-lg" />
-                            <span>Branding Médico</span>
+                            <span>Branding</span>
                           </Link>
                         </SheetClose>
                         <SheetClose asChild>
-                          <Link to="/servicos#publicidade-medica" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                          <Link to="/servicos#publicidade" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
                             <FaBoltLightning className="text-yellow-500 text-lg" />
-                            <span>Publicidade Médica</span>
+                            <span>Publicidade</span>
                           </Link>
                         </SheetClose>
                         <SheetClose asChild>
@@ -293,9 +295,9 @@ export const Header = () => {
                           </Link>
                         </SheetClose>
                         <SheetClose asChild>
-                          <Link to="/servicos#sites-medicos" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                          <Link to="/servicos#sites" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
                             <IoDesktop className="text-green-700 text-lg" />
-                            <span>Sites Médicos</span>
+                            <span>Sites</span>
                           </Link>
                         </SheetClose>
                         <SheetClose asChild>
@@ -305,21 +307,21 @@ export const Header = () => {
                           </Link>
                         </SheetClose>
                         <SheetClose asChild>
-                          <Link to="/servicos#seo-medico" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                          <Link to="/servicos#seo" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
                             <HiSpeakerphone className="text-blue-600 text-lg" />
-                            <span>SEO Médico</span>
+                            <span>SEO</span>
                           </Link>
                         </SheetClose>
                         <SheetClose asChild>
-                          <Link to="/servicos#conteudo-medico" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                          <Link to="/servicos#conteudo" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
                             <FaPlay className="text-green-600 text-lg" />
-                            <span>Conteúdo Médico</span>
+                            <span>Conteúdo</span>
                           </Link>
                         </SheetClose>
                         <SheetClose asChild>
-                          <Link to="/servicos#inbound-medico" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                          <Link to="/servicos#inbound" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
                             <FaRocket className="text-purple-600 text-lg" />
-                            <span>Inbound Médico</span>
+                            <span>Inbound</span>
                           </Link>
                         </SheetClose>
                       </div>
@@ -368,10 +370,10 @@ export const Header = () => {
                     {/* Botão CTA */}
                     <div className="pt-4 border-t border-[#660042] pb-6">
                       <SheetClose asChild>
-                        <button className="w-full rounded-full bg-[#FF9025] text-[#660042] font-bold py-3 px-6 flex items-center justify-center gap-2 hover:bg-white hover:text-[#FF9025] transition-all duration-300">
+                        <a href="https://api.whatsapp.com/send/?phone=5534996374463&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="w-full rounded-full bg-[#FF9025] text-[#660042] font-bold py-3 px-6 flex items-center justify-center gap-2 hover:bg-white hover:text-[#FF9025] transition-all duration-300">
                           Fale Conosco
                           <HiOutlineChatBubbleOvalLeftEllipsis size={20} />
-                        </button>
+                        </a>
                       </SheetClose>
                     </div>
                   </div>

@@ -25,7 +25,7 @@ export default function Servicos() {
       
       <Servico
         title={"Branding"}
-        title2={"Médico"}
+        title2={""}
         description={"Construção de identidade visual profissional para clínicas médicas, criando confiança e credibilidade junto aos pacientes."}
         imagem={foto1}
         badge={[
@@ -34,11 +34,11 @@ export default function Servicos() {
           { name: "Confiança" }
         ]}
         index={0}
-        id="branding-medico"
+        id="branding"
       />
       <Servico
         title={"Publicidade"}
-        title2={"Médica"}
+        title2={""}
         description={"Campanhas especializadas para o setor médico que conectam sua clínica aos pacientes certos, respeitando regulamentações."}
         imagem={foto2}
         badge={[
@@ -47,7 +47,7 @@ export default function Servicos() {
           { name: "Compliance" }
         ]}
         index={0}
-        id="publicidade-medica"
+        id="publicidade"
       />
       <Servico
         title={"Redes"}
@@ -56,7 +56,7 @@ export default function Servicos() {
         imagem={foto1}
         badge={[
           { name: "Gestão Estratégica" },
-          { name: "Autoridade Médica" },
+          { name: "Autoridade" },
           { name: "Engajamento" }
         ]}
         index={0}
@@ -64,7 +64,7 @@ export default function Servicos() {
       />
       <Servico
         title={"Sites"}
-        title2={"Médicos"}
+        title2={""}
         description={"Criação de sites profissionais para clínicas médicas, otimizados para conversão e credibilidade no setor."}
         imagem={foto2}
         badge={[
@@ -73,7 +73,7 @@ export default function Servicos() {
           { name: "Conversão" }
         ]}
         index={0}
-        id="sites-medicos"
+        id="sites"
       />
       <Servico
         title={"Tráfego"}
@@ -90,20 +90,20 @@ export default function Servicos() {
       />
       <Servico
         title={"SEO"}
-        title2={"Médico"}
+        title2={""}
         description={"Otimização para mecanismos de busca especializada em termos médicos, aumentando a visibilidade da sua clínica."}
         imagem={foto2}
         badge={[
-          { name: "SEO Médico" },
+          { name: "SEO" },
           { name: "Visibilidade" },
           { name: "Autoridade" }
         ]}
         index={0}
-        id="seo-medico"
+        id="seo"
       />
       <Servico
         title={"Conteúdo"}
-        title2={"Médico"}
+        title2={""}
         description={"Produção de conteúdo educativo e relevante para pacientes, criando autoridade médica e gerando confiança."}
         imagem={foto1}
         badge={[
@@ -112,11 +112,11 @@ export default function Servicos() {
           { name: "Confiança" }
         ]}
         index={0}
-        id="conteudo-medico"
+        id="conteudo"
       />
       <Servico
         title={"Inbound"}
-        title2={"Médico"}
+        title2={""}
         description={"Estratégias de inbound marketing para atrair, converter e fidelizar pacientes através de conteúdo de valor."}
         imagem={foto2}
         badge={[
@@ -125,7 +125,7 @@ export default function Servicos() {
           { name: "Fidelização" }
         ]}
         index={0}
-        id="inbound-medico"
+        id="inbound"
       />
     </>
   )

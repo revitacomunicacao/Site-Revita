@@ -44,7 +44,7 @@ export const Footer = () => {
                 <a href="https://www.linkedin.com/company/revita-comunicacao?originalSubdomain=br" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 bg-[#660042] rounded-full flex items-center justify-center hover:bg-secondary transition-colors duration-300">
                   <FaLinkedin className="text-white text-sm sm:text-base" />
                 </a>
-                <a href="https://wa.me/5534996374463" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 bg-[#660042] rounded-full flex items-center justify-center hover:bg-secondary transition-colors duration-300">
+                <a href="https://api.whatsapp.com/send/?phone=5534996374463&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 bg-[#660042] rounded-full flex items-center justify-center hover:bg-secondary transition-colors duration-300">
                   <FaWhatsapp className="text-white text-sm sm:text-base" />
                 </a>
               </div>
@@ -55,27 +55,27 @@ export const Footer = () => {
               <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-secondary">Links Rápidos</h3>
               <ul className="space-y-2 sm:space-y-3">
                 <li>
-                  <a href="/agencia" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/desenvolvimento/revita/agencia" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                     A Agência
                   </a>
                 </li>
                 <li>
-                  <a href="/portfolio" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/desenvolvimento/revita/portfolio" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                     Portfólio
                   </a>
                 </li>
                 <li>
-                  <a href="/blog" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/desenvolvimento/revita/blog" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                     Blog
                   </a>
                 </li>
                 <li>
-                  <a href="/contato" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/desenvolvimento/revita/contato" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                     Contato
                   </a>
                 </li>
                 <li>
-                  <a href="/politica-privacidade" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/desenvolvimento/revita/politicas-de-privacidade" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                     Política de Privacidade
                   </a>
                 </li>
@@ -87,42 +87,42 @@ export const Footer = () => {
               <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-secondary">Nossos Serviços</h3>
               <ul className="space-y-2 sm:space-y-3">
                 <li>
-                  <a href="#" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/desenvolvimento/revita/servicos#branding" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                   Branding
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/desenvolvimento/revita/servicos#publicidade" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                   Publicidade
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
-                  Mídias sociais
+                  <a href="/desenvolvimento/revita/servicos#redes-sociais" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  Redes Sociais
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/desenvolvimento/revita/servicos#sites" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                   Sites
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="servicos#trafego-pago" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                   Tráfego pago
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="servicos#seo-medico" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                   SEO
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/desenvolvimento/revita/servicos#conteudo" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                   Conteúdo
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/desenvolvimento/revita/servicos#inbound" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                   Inbound Mkt
                   </a>
                 </li>
@@ -140,7 +140,7 @@ export const Footer = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <a href="https://wa.me/5534996374463" className="flex flex-row gap-2">
+                  <a href="https://api.whatsapp.com/send/?phone=5534996374463&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="flex flex-row gap-2">
                     <Phone className="text-secondary mt-1 flex-shrink-0" size={16} />
                     <FaWhatsapp className="text-secondary mt-1 flex-shrink-0" size={16} />
                     <div>
@@ -177,7 +177,7 @@ export const Footer = () => {
               © 2025 Revita Comunicação. Todos os direitos reservados.
             </p>
             <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6 text-xs sm:text-sm">
-              <a href="/privacidade" className="text-white/60 hover:text-secondary transition-colors duration-300">
+              <a href="/desenvolvimento/revita/politicas-de-privacidade" className="text-white/60 hover:text-secondary transition-colors duration-300">
                 Política de Privacidade
               </a>
             </div>

@@ -2,7 +2,6 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, Di
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
-import portfolioImg from "@/assets/portfolio.png";
 import Trofeu from "@/assets/trofeu.svg";
 import { AnimatedElement } from "@/components/AnimatedElement";
 
@@ -23,21 +22,21 @@ const portfolioData = [
     name: "Choperia Colorado",
     site: "https://choperiacolorado.com.br/",
     bg: colorado1,
-    desc: "",
+    desc: "Choperia Colorado: Há 17 anos em Uberaba, a Choperia Colorado é referência em chopp gelado, gastronomia variada e música ao vivo, reunindo tradição, qualidade e momentos inesquecíveis.",
     tags: ["REBRANDING", "DESIGN", "TRÁFEGO PAGO", "CARDÁPIO", "ESTRATÉGIAS MARKETING", "DESENVOLVIVENTO WEB"],
   },
   {
     name: "Choperia Colorado",
     site: "https://choperiacolorado.com.br/",
     bg: colorado2,
-    desc: "",
+    desc: "Choperia Colorado: Há 17 anos em Uberaba, a Choperia Colorado é referência em chopp gelado, gastronomia variada e música ao vivo, reunindo tradição, qualidade e momentos inesquecíveis.",
     tags: ["REBRANDING", "DESIGN", "TRÁFEGO PAGO", "CARDÁPIO", "ESTRATÉGIAS MARKETING", "DESENVOLVIVENTO WEB"],
   },
   {
     name: "Choperia Colorado",
     site: "https://choperiacolorado.com.br/",
     bg: colorado3,
-    desc: "",
+    desc: "Choperia Colorado: Há 17 anos em Uberaba, a Choperia Colorado é referência em chopp gelado, gastronomia variada e música ao vivo, reunindo tradição, qualidade e momentos inesquecíveis.",
     tags: ["REBRANDING", "DESIGN", "TRÁFEGO PAGO", "CARDÁPIO", "ESTRATÉGIAS MARKETING", "DESENVOLVIVENTO WEB"],
   },
 
@@ -49,21 +48,21 @@ const portfolioData = [
     name: "Dicasa & Campo",
     site: "https://dicasaecampo.com.br/",
     bg: dicasa1,
-    desc: "",
+    desc: "Di Casa & Campo: A Di Casa & Campo é especialista em soluções para casa, campo e lazer, com amplo mix de ferramentas, jardinagem, elétricos e hidráulicos, sempre com atendimento próximo e confiável.",
     tags: ["DESIGN", "TRÁGEFO PAGO", "DESENVOLVIVENTO WEB", "ESTRATÉGIAS MARKETING"],
   },
   {
     name: "Dicasa & Campo",
     site: "https://dicasaecampo.com.br/",
     bg: dicasa2,
-    desc: "",
+    desc: "Di Casa & Campo: A Di Casa & Campo é especialista em soluções para casa, campo e lazer, com amplo mix de ferramentas, jardinagem, elétricos e hidráulicos, sempre com atendimento próximo e confiável.",
     tags: ["DESIGN", "TRÁGEFO PAGO", "DESENVOLVIVENTO WEB", "ESTRATÉGIAS MARKETING"],
   },
   {
     name: "Dicasa & Campo",
     site: "https://dicasaecampo.com.br/",
     bg: dicasa3,
-    desc: "",
+    desc: "Di Casa & Campo: A Di Casa & Campo é especialista em soluções para casa, campo e lazer, com amplo mix de ferramentas, jardinagem, elétricos e hidráulicos, sempre com atendimento próximo e confiável.",
     tags: ["DESIGN", "TRÁGEFO PAGO", "DESENVOLVIVENTO WEB", "ESTRATÉGIAS MARKETING"],
   },
 
@@ -73,21 +72,21 @@ const portfolioData = [
     name: "Rede Caxuxa Triangulo",
     site: "https://redecaxuxatriangulo.com.br/",
     bg: cxx1,
-    desc: "",
+    desc: "Rede Caxuxa Triângulo: A Rede Caxuxa Triângulo é sinônimo de confiança no segmento automotivo, oferecendo postos de combustíveis, conveniência e serviços de qualidade em toda a região.",
     tags: ["DESIGN", "TRÁGEFO PAGO", "DESENVOLVIVENTO WEB", "ESTRATÉGIAS MARKETING"],
   },
   {
     name: "Rede Caxuxa Triangulo",
     site: "https://redecaxuxatriangulo.com.br/",
     bg: cxx2,
-    desc: "",
+    desc: "Rede Caxuxa Triângulo: A Rede Caxuxa Triângulo é sinônimo de confiança no segmento automotivo, oferecendo postos de combustíveis, conveniência e serviços de qualidade em toda a região.",
     tags: ["DESIGN", "TRÁGEFO PAGO", "DESENVOLVIVENTO WEB", "ESTRATÉGIAS MARKETING"],
   },
   {
     name: "Rede Caxuxa Triangulo",
     site: "https://redecaxuxatriangulo.com.br/",
     bg: cxx3,
-    desc: "",
+    desc: "Rede Caxuxa Triângulo: A Rede Caxuxa Triângulo é sinônimo de confiança no segmento automotivo, oferecendo postos de combustíveis, conveniência e serviços de qualidade em toda a região.",
     tags: ["DESIGN", "TRÁGEFO PAGO", "DESENVOLVIVENTO WEB", "ESTRATÉGIAS MARKETING"],
   },
 ]

@@ -39,7 +39,7 @@ import logoIntec from "@/assets/logos/intec.png";
 import logoJaniPontes from "@/assets/logos/janiopontes.png";
 import logoJockey from "@/assets/logos/jockey.png";
 import logoJkBuffet from "@/assets/logos/jkbuffet.png";
-import logoLarDaEsperanca from "@/assets/logos/lardaesperança.png";
+import logoLarDaEsperanca from "@/assets/logos/lardaesperanca.png";
 import logoLaurene from "@/assets/logos/laurene.png";
 import logoLemon from "@/assets/logos/lemon.png";
 import logoLeone from "@/assets/logos/leone.png";

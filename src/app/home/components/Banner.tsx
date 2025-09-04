@@ -95,9 +95,9 @@ export const Banner = () => {
                    })}
                  </h1>
                 <p className="text-base sm:text-lg md:text-xl lg:text-xl text-white/80 max-w-2xl mx-auto lg:mx-0 animate-fade-in-left leading-relaxed">{slide.desc}</p>
-                <button className="mt-4 sm:mt-6 lg:mt-4 px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-[#FF9025] text-[#660042] font-bold text-base sm:text-lg shadow-lg hover:bg-[#fff] hover:text-[#FF9025] transition-all duration-300 animate-fade-in-up w-fit mx-auto lg:mx-0">
+                <a href="https://api.whatsapp.com/send/?phone=5534996374463&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="mt-4 sm:mt-6 lg:mt-4 px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-[#FF9025] text-[#660042] font-bold text-base sm:text-lg shadow-lg hover:bg-[#fff] hover:text-[#FF9025] transition-all duration-300 animate-fade-in-up w-fit mx-auto lg:mx-0 inline-block">
                   {slide.cta}
-                </button>
+                </a>
               </div>
               {/* Direita: Imagem - apenas em telas grandes */}
               <div className={`hidden lg:flex flex-1 justify-end items-center h-full transition-all duration-700
