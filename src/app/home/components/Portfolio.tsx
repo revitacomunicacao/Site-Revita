@@ -17,25 +17,29 @@ import cxx1 from "@/assets/portfolioHome/cxx01.png"
 import cxx2 from "@/assets/portfolioHome/cxx02.png"
 import cxx3 from "@/assets/portfolioHome/cxx03.png"
 
+import cardio1 from "@/assets/portfolioHome/Layout-site-rodrigo_01.jpg"
+import cardio2 from "@/assets/portfolioHome/layout2.png"
+import cardio3 from "@/assets/portfolioHome/layout3.png"
+
 const portfolioData = [
   {
     name: "CardioClínica GastroCenter",
     site: "https://gastrocardio.com.br/",
-    bg: colorado1,
+    bg: cardio1,
     desc: "A Cardioclínica Gastrocenter, em Araxá-MG, oferece consultas e exames de alta precisão em diversas especialidades médicas, com tecnologia avançada, atendimento por convênios e acolhimento humano.",
     tags: ["REBRANDING", "DESIGN", "TRÁFEGO PAGO", "CARDÁPIO", "ESTRATÉGIAS MARKETING", "DESENVOLVIVENTO WEB"],
   },
   {
     name: "CardioClínica GastroCenter",
     site: "https://gastrocardio.com.br/",
-    bg: colorado2,
+    bg: cardio2,
     desc: "A Cardioclínica Gastrocenter, em Araxá-MG, oferece consultas e exames de alta precisão em diversas especialidades médicas, com tecnologia avançada, atendimento por convênios e acolhimento humano.",
     tags: ["REBRANDING", "DESIGN", "TRÁFEGO PAGO", "CARDÁPIO", "ESTRATÉGIAS MARKETING", "DESENVOLVIVENTO WEB"],
   },
   {
     name: "CardioClínica GastroCenter",
     site: "https://gastrocardio.com.br/",
-    bg: colorado3,
+    bg: cardio3,
     desc: "A Cardioclínica Gastrocenter, em Araxá-MG, oferece consultas e exames de alta precisão em diversas especialidades médicas, com tecnologia avançada, atendimento por convênios e acolhimento humano.",
     tags: ["REBRANDING", "DESIGN", "TRÁFEGO PAGO", "CARDÁPIO", "ESTRATÉGIAS MARKETING", "DESENVOLVIVENTO WEB"],
   },

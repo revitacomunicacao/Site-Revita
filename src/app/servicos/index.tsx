@@ -1,6 +1,7 @@
 import { Servico } from "./components/Servico"
 import foto1 from "@/assets/FeaturesBanner02.png"
 import foto2 from "@/assets/FeaturesBanner01.png"
+import foto3 from "@/assets/inteligencia-artificial.jpg"
 import { PageHeader } from "@/components/Layout/PageHeader"
 import { useScrollToAnchor, scrollToAnchor } from "@/hooks/useScrollToAnchor"
 
@@ -27,7 +28,7 @@ export default function Servicos() {
         title={"Inteligência"}
         title2={"Artificial"}
         description={"Plataforma de atendimento via WhatsApp com inteligência artificial. Eficiência e produtividade para sua equipe."}
-        imagem={foto1}
+        imagem={foto3}
         badge={[
           { name: "Eficiência" },
           { name: "Atendimento" },
