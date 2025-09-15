@@ -19,6 +19,36 @@ import cxx3 from "@/assets/portfolioHome/cxx03.png"
 
 const portfolioData = [
   {
+    name: "CardioClínica GastroCenter",
+    site: "https://gastrocardio.com.br/",
+    bg: colorado1,
+    desc: "A Cardioclínica Gastrocenter, em Araxá-MG, oferece consultas e exames de alta precisão em diversas especialidades médicas, com tecnologia avançada, atendimento por convênios e acolhimento humano.",
+    tags: ["REBRANDING", "DESIGN", "TRÁFEGO PAGO", "CARDÁPIO", "ESTRATÉGIAS MARKETING", "DESENVOLVIVENTO WEB"],
+  },
+  {
+    name: "CardioClínica GastroCenter",
+    site: "https://gastrocardio.com.br/",
+    bg: colorado2,
+    desc: "A Cardioclínica Gastrocenter, em Araxá-MG, oferece consultas e exames de alta precisão em diversas especialidades médicas, com tecnologia avançada, atendimento por convênios e acolhimento humano.",
+    tags: ["REBRANDING", "DESIGN", "TRÁFEGO PAGO", "CARDÁPIO", "ESTRATÉGIAS MARKETING", "DESENVOLVIVENTO WEB"],
+  },
+  {
+    name: "CardioClínica GastroCenter",
+    site: "https://gastrocardio.com.br/",
+    bg: colorado3,
+    desc: "A Cardioclínica Gastrocenter, em Araxá-MG, oferece consultas e exames de alta precisão em diversas especialidades médicas, com tecnologia avançada, atendimento por convênios e acolhimento humano.",
+    tags: ["REBRANDING", "DESIGN", "TRÁFEGO PAGO", "CARDÁPIO", "ESTRATÉGIAS MARKETING", "DESENVOLVIVENTO WEB"],
+  },
+
+
+
+
+
+
+
+
+
+  {
     name: "Choperia Colorado",
     site: "https://choperiacolorado.com.br/",
     bg: colorado1,

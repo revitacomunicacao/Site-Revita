@@ -2,25 +2,39 @@ import { useEffect, useRef, useState } from "react";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import modeloSelos from "@/assets/Modelo-Selos.png";
 import backgroundVideo from "@/assets/video-luzes-vertical.mp4";
+import video from "@/assets/video.mp4"
+import video2 from "@/assets/video2.mp4"
+import video3 from "@/assets/video3.mp4"
 
 const slides = [
   {
     miniTitle: "Especialistas em Clínicas Médicas",
-    title: "Marketing Digital para Clínicas que Converte",
-    desc: "Transformamos clínicas médicas em referências no setor. Estratégias especializadas que aumentam a confiança dos pacientes e geram mais consultas qualificadas.",
+    title: "Marketing Digital para Clínicas Médicas",
+    desc: "Transformamos Clínicas Médicas em referências no setor. Estratégias especializadas que aumentam a confiança dos pacientes e geram mais consultas qualificadas.",
     cta: "Fale com um especialista",
+    background: backgroundVideo,
+    image: modeloSelos,
+  },
+  {
+    miniTitle: "Especialistas em Clínicas Médicas",
+    title: "Marketing Digital para Clínicas Médicas",
+    desc: "Transformamos Clínicas Médicas em referências no setor. Estratégias especializadas que aumentam a confiança dos pacientes e geram mais consultas qualificadas.",
+    cta: "Fale com um especialista",
+    background: video,
   },
   {
     miniTitle: "Resultados Comprovados",
-    title: "Soluções Digitais para Clínicas",
-    desc: "Utilizamos tecnologia avançada e análise de dados para gerar crescimento sustentável e resultados mensuráveis para sua clínica médica.",
+    title: "Soluções Digitais para Clínicas Médicas",
+    desc: "Utilizamos tecnologia avançada e análise de dados para gerar crescimento sustentável e resultados mensuráveis para sua Clínica Médica.",
     cta: "Solicite um diagnóstico",
+    background: video2,
   },
   {
     miniTitle: "Confiança & Credibilidade",
-    title: "Sua Clínica em Primeiro Lugar",
+    title: "Sua Clínica Médica em Primeiro Lugar",
     desc: "Transformamos Clínicas Médicas em marcas admiradas no setor, preferidas pelos pacientes e reconhecidas pela excelência. Mais que uma agência, somos parceiros do seu negócio.",
     cta: "Conheça nossos cases",
+    background: video3,
   },
 ];
 
@@ -58,18 +72,25 @@ export const Banner = () => {
 
   return (
     <section className="w-full h-[500px] sm:h-[600px] md:h-[650px] lg:h-[600px] flex items-center justify-center relative overflow-hidden select-none">
-      {/* Vídeo de fundo fixo */}
-      <video
-        className="absolute inset-0 w-full h-full object-cover"
-        src={backgroundVideo}
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
-      
-      {/* Overlay escuro sobre o vídeo */}
-      <div className="absolute inset-0 bg-black/50" />
+      {/* Backgrounds individuais com fade */}
+      {slides.map((slide, idx) => (
+        <div
+          key={idx}
+          className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
+            current === idx ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <video
+            className="absolute inset-0 w-full h-full object-cover"
+            src={slide.background}
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+      ))}
 
       {/* Conteúdo animado */}
       <div className="w-full h-full relative z-10 flex items-center justify-center">
@@ -100,16 +121,18 @@ export const Banner = () => {
                 </a>
               </div>
               {/* Direita: Imagem - apenas em telas grandes */}
-              <div className={`hidden lg:flex flex-1 justify-end items-center h-full transition-all duration-700
-                ${direction === "right" ? "animate-slide-in-right" : "animate-slide-in-left"}
-              `}>
-                <img
-                  src={modeloSelos}
-                  alt="Banner Ilustração"
-                  className="max-h-[350px] xl:max-h-[400px] w-auto drop-shadow-2xl rounded-3xl object-contain"
-                  draggable={false}
-                />
-              </div>
+              {slide.image && (
+                <div className={`hidden lg:flex flex-1 justify-end items-center h-full transition-all duration-700
+                  ${direction === "right" ? "animate-slide-in-right" : "animate-slide-in-left"}
+                `}>
+                  <img
+                    src={slide.image}
+                    alt="Banner Ilustração"
+                    className="max-h-[350px] xl:max-h-[400px] w-auto drop-shadow-2xl rounded-3xl object-contain"
+                    draggable={false}
+                  />
+                </div>
+              )}
             </div>
           );
         })}

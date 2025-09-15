@@ -1,5 +1,5 @@
 import { Mail, Phone, Menu } from "lucide-react";
-import { FaFacebook, FaInstagram, FaLinkedin, FaPlay, FaRocket, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaPlay, FaRocket, FaWhatsapp, FaRobot } from "react-icons/fa";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -129,12 +129,16 @@ export const Header = () => {
                     <NavigationMenuContent className="p-0 border-none ">
                       <div className="flex flex-col gap-3 bg-[#29003c] w-[300px] p-2 rounded-1xl">
                         <div>
-                          <Link to="/servicos#branding-medico" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
-                            <HiSpeakerphone className="text-purple-700" />
-                            Branding
+                          <Link to="/servicos#inteligencia-artificial" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
+                            <FaRobot className="text-cyan-500" />
+                            Inteligência Artificial
                           </Link>
                         </div>
-                        <Link to="/servicos#publicidade-medica" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
+                        <Link to="/servicos#branding" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
+                          <HiSpeakerphone className="text-purple-700" />
+                          Branding
+                        </Link>
+                        <Link to="/servicos#publicidade" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
                           <FaBoltLightning className="text-yellow-500" />
                           Publicidade
                         </Link>
@@ -142,7 +146,7 @@ export const Header = () => {
                           <FaPlay className="text-cyan-600" />
                           Redes Sociais
                         </Link>
-                        <Link to="/servicos#sites-medicos" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
+                        <Link to="/servicos#sites" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
                           <IoDesktop className="text-green-700" />
                           Sites
                         </Link>
@@ -150,17 +154,13 @@ export const Header = () => {
                           <FaRocket className="text-amber-700" />
                           Tráfego Pago
                         </Link>
-                        <Link to="/servicos#seo-medico" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
+                        <Link to="/servicos#seo" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
                           <HiSpeakerphone className="text-blue-600" />
                           SEO
                         </Link>
-                        <Link to="/servicos#conteudo-medico" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
-                          <FaPlay className="text-green-600" />
-                          Conteúdo
-                        </Link>
-                        <Link to="/servicos#inbound-medico" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
+                        <Link to="/servicos#conteudo-inbound" className="text-white flex gap-2 flex-row items-center p-2 rounded-2xl hover:bg-[#111522] transition duration-300 ease-in-out cursor-pointer">
                           <FaRocket className="text-purple-600" />
-                          Inbound
+                          Conteúdo e Inbound
                         </Link>
                       </div>
                     </NavigationMenuContent>
@@ -194,9 +194,17 @@ export const Header = () => {
             </nav>
             <div className="flex-shrink-0">
               <Link to={"https://api.whatsapp.com/send/?phone=5534996374463&text&type=phone_number&app_absent=0"}>
-                <button className="rounded-full bg-secondary px-5 flex gap-2 items-center hover:bg-white hover:text-secondary cursor-pointer py-1 text-base">
-                  Fale Conosco
-                  <HiOutlineChatBubbleOvalLeftEllipsis size={20} />
+                <button className="group relative h-12 rounded-full border-2 border-[#FF9025] bg-gradient-to-r from-[#FF9025] to-[#FF6B35] px-5 text-[#660042] hover:from-[#FF6B35] hover:to-[#FF9025] transition-all duration-300 overflow-hidden cursor-pointer">
+                  <span className="relative inline-flex items-center gap-2 h-full w-full">
+                    <span className="transition duration-500 group-hover:-translate-y-[200%] group-hover:skew-y-12 flex items-center gap-2 w-full justify-center">
+                      Fale Conosco
+                      <HiOutlineChatBubbleOvalLeftEllipsis size={20} />
+                    </span>
+                    <span className="absolute top-0 left-0 translate-y-[200%] skew-y-12 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0 flex items-center gap-2 h-full w-full justify-center">
+                      Fale Conosco
+                      <HiOutlineChatBubbleOvalLeftEllipsis size={20} />
+                    </span>
+                  </span>
                 </button>
               </Link>
             </div>
@@ -277,6 +285,12 @@ export const Header = () => {
                       <h3 className="text-[#FF9025] font-semibold text-sm uppercase tracking-wider">Soluções</h3>
                       <div className="space-y-3">
                         <SheetClose asChild>
+                          <Link to="/servicos#inteligencia-artificial" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                            <FaRobot className="text-cyan-500 text-lg" />
+                            <span>Inteligência Artificial</span>
+                          </Link>
+                        </SheetClose>
+                        <SheetClose asChild>
                           <Link to="/servicos#branding" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
                             <HiSpeakerphone className="text-purple-700 text-lg" />
                             <span>Branding</span>
@@ -313,15 +327,9 @@ export const Header = () => {
                           </Link>
                         </SheetClose>
                         <SheetClose asChild>
-                          <Link to="/servicos#conteudo" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
-                            <FaPlay className="text-green-600 text-lg" />
-                            <span>Conteúdo</span>
-                          </Link>
-                        </SheetClose>
-                        <SheetClose asChild>
-                          <Link to="/servicos#inbound" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
+                          <Link to="/servicos#conteudo-inbound" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200 py-2">
                             <FaRocket className="text-purple-600 text-lg" />
-                            <span>Inbound</span>
+                            <span>Conteúdo e Inbound</span>
                           </Link>
                         </SheetClose>
                       </div>
@@ -370,9 +378,17 @@ export const Header = () => {
                     {/* Botão CTA */}
                     <div className="pt-4 border-t border-[#660042] pb-6">
                       <SheetClose asChild>
-                        <a href="https://api.whatsapp.com/send/?phone=5534996374463&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="w-full rounded-full bg-[#FF9025] text-[#660042] font-bold py-3 px-6 flex items-center justify-center gap-2 hover:bg-white hover:text-[#FF9025] transition-all duration-300">
-                          Fale Conosco
-                          <HiOutlineChatBubbleOvalLeftEllipsis size={20} />
+                        <a href="https://api.whatsapp.com/send/?phone=5534996374463&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="group relative h-12 w-full rounded-full border-2 border-[#FF9025] bg-gradient-to-r from-[#FF9025] to-[#FF6B35] px-6 text-[#660042] hover:from-[#FF6B35] hover:to-[#FF9025] transition-all duration-300 flex items-center justify-center overflow-hidden cursor-pointer">
+                          <span className="relative inline-flex items-center gap-2 h-full w-full">
+                            <span className="transition duration-500 group-hover:-translate-y-[200%] group-hover:skew-y-12 flex items-center gap-2 w-full justify-center">
+                              Fale Conosco
+                              <HiOutlineChatBubbleOvalLeftEllipsis size={20} />
+                            </span>
+                            <span className="absolute top-0 left-0 translate-y-[200%] skew-y-12 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0 flex items-center gap-2 h-full w-full justify-center">
+                              Fale Conosco
+                              <HiOutlineChatBubbleOvalLeftEllipsis size={20} />
+                            </span>
+                          </span>
                         </a>
                       </SheetClose>
                     </div>

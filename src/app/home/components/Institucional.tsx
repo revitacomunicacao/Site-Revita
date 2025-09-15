@@ -6,17 +6,17 @@ export const Institutional = () => {
   const stats = [
     {
       icon: FaUsers,
-      number: "50+",
-      label: "Clínicas Atendidas"
+      number: "+150",
+      label: "Clientes Atendidos"
     },
     {
       icon: FaChartLine,
-      number: "200%",
-      label: "Aumento Médio de Consultas"
+      number: "20%",
+      label: "Aumento Médio de Atendimentos"
     },
     {
       icon: FaAward,
-      number: "5+",
+      number: "+25",
       label: "Anos de Experiência"
     }
   ];
@@ -105,7 +105,7 @@ export const Institutional = () => {
               <AnimatedElement animation="slide-up" delay={600}>
                 <Card className="bg-white/5 backdrop-blur-sm border-white/10 hover:bg-white/10 transition-all duration-300 h-40">
                   <CardContent className="p-4">
-                    <h4 className="text-[#FF9025] font-semibold mb-2">Estratégia para Clínicas</h4>
+                    <h4 className="text-[#FF9025] font-semibold mb-2">Estratégia para Clínicas Médicas</h4>
                     <p className="text-white/70 text-sm">Cada projeto é desenvolvido especificamente para o setor médico</p>
                   </CardContent>
                 </Card>

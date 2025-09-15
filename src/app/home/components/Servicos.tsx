@@ -5,13 +5,19 @@ import { AnimatedElement } from "@/components/AnimatedElement";
 
 const services = [
   { 
-    name: "Branding Médico", 
+    name: "Inteligência Artificial", 
+    icon: <FaPenNib />, 
+    desc: "Plataforma de atendimento via WhatsApp com inteligência artificial. Eficiência e produtividade para sua equipe.",
+    features: ["Eficiência", "Atendimento", "Agilidade", "Inteligência Artificial"]
+  },
+  { 
+    name: "Branding", 
     icon: <FaPalette />, 
     desc: "Construção de identidade visual profissional para clínicas médicas, criando confiança e credibilidade junto aos pacientes.",
     features: ["Identidade Visual", "Credibilidade", "Confiança"]
   },
   { 
-    name: "Publicidade Médica", 
+    name: "Publicidade", 
     icon: <FaBullhorn />, 
     desc: "Campanhas especializadas para o setor médico que conectam sua clínica aos pacientes certos, respeitando regulamentações.",
     features: ["Campanhas Especializadas", "Segmentação", "Compliance"]
@@ -23,7 +29,7 @@ const services = [
     features: ["Gestão Estratégica", "Autoridade Médica", "Engajamento"]
   },
   { 
-    name: "Sites Médicos", 
+    name: "Sites", 
     icon: <FaRocket />, 
     desc: "Criação de sites profissionais para clínicas médicas, otimizados para conversão e credibilidade no setor.",
     features: ["Sites Profissionais", "Credibilidade", "Conversão"]
@@ -35,19 +41,14 @@ const services = [
     features: ["Pacientes Qualificados", "ROI Mensurável", "Segmentação"]
   },
   { 
-    name: "SEO Médico", 
+    name: "SEO", 
     icon: <FaSearch />, 
     desc: "Otimização para mecanismos de busca especializada em termos médicos, aumentando a visibilidade da sua clínica.",
     features: ["SEO Médico", "Visibilidade", "Autoridade"]
   },
+
   { 
-    name: "Conteúdo Médico", 
-    icon: <FaPenNib />, 
-    desc: "Produção de conteúdo educativo e relevante para pacientes, criando autoridade médica e gerando confiança.",
-    features: ["Conteúdo Educativo", "Autoridade", "Confiança"]
-  },
-  { 
-    name: "Inbound Médico", 
+    name: "Conteúdo e Inbound", 
     icon: <FaMagnet />, 
     desc: "Estratégias de inbound marketing para atrair, converter e fidelizar pacientes através de conteúdo de valor.",
     features: ["Atração", "Conversão", "Fidelização"]
@@ -93,7 +94,7 @@ export const Servicos = () => {
           </AnimatedElement>
           <AnimatedElement animation="slide-up" delay={400}>
             <p className="text-white/90 text-lg max-w-2xl text-center leading-relaxed">
-              Soluções completas para impulsionar sua clínica médica no universo digital. Estratégia, criatividade e tecnologia para gerar mais pacientes e confiança.
+              Soluções completas para impulsionar sua Clínica Médica no universo digital. Estratégia, criatividade e tecnologia para gerar mais pacientes e confiança.
             </p>
           </AnimatedElement>
         </AnimatedElement>

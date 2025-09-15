@@ -24,6 +24,20 @@ export default function Servicos() {
       />
       
       <Servico
+        title={"Inteligência"}
+        title2={"Artificial"}
+        description={"Plataforma de atendimento via WhatsApp com inteligência artificial. Eficiência e produtividade para sua equipe."}
+        imagem={foto1}
+        badge={[
+          { name: "Eficiência" },
+          { name: "Atendimento" },
+          { name: "Agilidade" },
+          { name: "Inteligência Artificial" }
+        ]}
+        index={0}
+        id="inteligencia-artificial"
+      />
+      <Servico
         title={"Branding"}
         title2={""}
         description={"Construção de identidade visual profissional para clínicas médicas, criando confiança e credibilidade junto aos pacientes."}
@@ -103,20 +117,7 @@ export default function Servicos() {
       />
       <Servico
         title={"Conteúdo"}
-        title2={""}
-        description={"Produção de conteúdo educativo e relevante para pacientes, criando autoridade médica e gerando confiança."}
-        imagem={foto1}
-        badge={[
-          { name: "Conteúdo Educativo" },
-          { name: "Autoridade" },
-          { name: "Confiança" }
-        ]}
-        index={0}
-        id="conteudo"
-      />
-      <Servico
-        title={"Inbound"}
-        title2={""}
+        title2={"e Inbound"}
         description={"Estratégias de inbound marketing para atrair, converter e fidelizar pacientes através de conteúdo de valor."}
         imagem={foto2}
         badge={[
@@ -125,7 +126,7 @@ export default function Servicos() {
           { name: "Fidelização" }
         ]}
         index={0}
-        id="inbound"
+        id="conteudo-inbound"
       />
     </>
   )

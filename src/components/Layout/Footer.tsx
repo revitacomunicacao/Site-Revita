@@ -87,6 +87,11 @@ export const Footer = () => {
               <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-secondary">Nossos Serviços</h3>
               <ul className="space-y-2 sm:space-y-3">
                 <li>
+                  <a href="/desenvolvimento/revita/servicos#inteligencia-artificial" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  Inteligência Artificial
+                  </a>
+                </li>
+                <li>
                   <a href="/desenvolvimento/revita/servicos#branding" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                   Branding
                   </a>
@@ -107,23 +112,18 @@ export const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="servicos#trafego-pago" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/desenvolvimento/revita/servicos#trafego-pago" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                   Tráfego pago
                   </a>
                 </li>
                 <li>
-                  <a href="servicos#seo-medico" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/desenvolvimento/revita/servicos#seo" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                   SEO
                   </a>
                 </li>
                 <li>
-                  <a href="/desenvolvimento/revita/servicos#conteudo" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
-                  Conteúdo
-                  </a>
-                </li>
-                <li>
-                  <a href="/desenvolvimento/revita/servicos#inbound" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
-                  Inbound Mkt
+                  <a href="/desenvolvimento/revita/servicos#conteudo-inbound" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  Conteúdo e Inbound
                   </a>
                 </li>
               </ul>
