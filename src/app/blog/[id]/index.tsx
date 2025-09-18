@@ -68,7 +68,7 @@ export default function BlogDetails() {
     
     // Teste direto da API
     if (id) {
-      fetch(`https://companhiadamidia.com.br/desenvolvimento/revita/admin/wp-json/headless/v1/blog/${id}`)
+      fetch(`https://companhiadamidia.com.br/admin/wp-json/headless/v1/blog/${id}`)
         .then(response => response.json())
         .then(data => console.log("Teste direto da API:", data))
         .catch(err => console.error("Erro no teste direto:", err))
@@ -113,7 +113,7 @@ export default function BlogDetails() {
           <p className="text-gray-600 mb-4">Não foi possível carregar o conteúdo solicitado.</p>
           <p className="text-sm text-gray-500">ID: {id}</p>
           <p className="text-sm text-gray-500">Erro: {error.message}</p>
-          <p className="text-sm text-gray-500">URL: https://companhiadamidia.com.br/desenvolvimento/revita/admin/wp-json/headless/v1/blog/{id}</p>
+          <p className="text-sm text-gray-500">URL: https://companhiadamidia.com.br/admin/wp-json/headless/v1/blog/{id}</p>
           <a 
             href="/blog" 
             className="inline-block mt-4 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"

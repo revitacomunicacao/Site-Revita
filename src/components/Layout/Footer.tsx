@@ -55,27 +55,27 @@ export const Footer = () => {
               <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-secondary">Links Rápidos</h3>
               <ul className="space-y-2 sm:space-y-3">
                 <li>
-                  <a href="/desenvolvimento/revita/agencia" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/agencia" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                     A Agência
                   </a>
                 </li>
                 <li>
-                  <a href="/desenvolvimento/revita/portfolio" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/portfolio" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                     Portfólio
                   </a>
                 </li>
                 <li>
-                  <a href="/desenvolvimento/revita/blog" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/blog" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                     Blog
                   </a>
                 </li>
                 <li>
-                  <a href="/desenvolvimento/revita/contato" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/contato" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                     Contato
                   </a>
                 </li>
                 <li>
-                  <a href="/desenvolvimento/revita/politicas-de-privacidade" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/politicas-de-privacidade" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                     Política de Privacidade
                   </a>
                 </li>
@@ -87,42 +87,42 @@ export const Footer = () => {
               <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-secondary">Nossos Serviços</h3>
               <ul className="space-y-2 sm:space-y-3">
                 <li>
-                  <a href="/desenvolvimento/revita/servicos#inteligencia-artificial" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/servicos#inteligencia-artificial" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                   Inteligência Artificial
                   </a>
                 </li>
                 <li>
-                  <a href="/desenvolvimento/revita/servicos#branding" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/servicos#branding" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                   Branding
                   </a>
                 </li>
                 <li>
-                  <a href="/desenvolvimento/revita/servicos#publicidade" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/servicos#publicidade" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                   Publicidade
                   </a>
                 </li>
                 <li>
-                  <a href="/desenvolvimento/revita/servicos#redes-sociais" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/servicos#redes-sociais" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                   Redes Sociais
                   </a>
                 </li>
                 <li>
-                  <a href="/desenvolvimento/revita/servicos#sites" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/servicos#sites" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                   Sites
                   </a>
                 </li>
                 <li>
-                  <a href="/desenvolvimento/revita/servicos#trafego-pago" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/servicos#trafego-pago" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                   Tráfego pago
                   </a>
                 </li>
                 <li>
-                  <a href="/desenvolvimento/revita/servicos#seo" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/servicos#seo" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                   SEO
                   </a>
                 </li>
                 <li>
-                  <a href="/desenvolvimento/revita/servicos#conteudo-inbound" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                  <a href="/servicos#conteudo-inbound" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                   Conteúdo e Inbound
                   </a>
                 </li>
@@ -177,7 +177,7 @@ export const Footer = () => {
               © 2025 Revita Comunicação. Todos os direitos reservados.
             </p>
             <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6 text-xs sm:text-sm">
-              <a href="/desenvolvimento/revita/politicas-de-privacidade" className="text-white/60 hover:text-secondary transition-colors duration-300">
+              <a href="/politicas-de-privacidade" className="text-white/60 hover:text-secondary transition-colors duration-300">
                 Política de Privacidade
               </a>
             </div>

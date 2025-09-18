@@ -283,7 +283,7 @@ export const ListBlog = () => {
                           <h2 className="font-bold text-sm md:text-base line-clamp-2">{title}</h2>
                         </div>
                         <p className="text-[#7a7a7a] text-[10px] md:text-[12px] line-clamp-3">{summary.slice(0, 120) + "..."}</p>
-                        <a href={`/desenvolvimento/revita/blog/${id}`}>
+                        <a href={`/blog/${id}`}>
                           <Button className="bg-secondary hover:bg-primary hover:text-white flex justify-between items-center rounded-full px-4 md:px-6 py-4 md:py-6 transition-all duration-300 transform hover:scale-105 hover:shadow-lg border-0 text-gray-800 font-semibold cursor-pointer w-full text-xs md:text-sm">
                             <span className="flex items-center gap-2">
                               Continuar lendo

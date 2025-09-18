@@ -5,12 +5,12 @@ Site institucional da Revita Comunicação, desenvolvido com React, TypeScript e
 ## 🚀 Deploy
 
 Este projeto está configurado para ser hospedado em:
-**https://companhiadamidia.com.br/desenvolvimento/revita/**
+**https://companhiadamidia.com.br/**
 
 ### Configurações Aplicadas
 
-1. **Base Path**: Configurado no `vite.config.ts` como `/desenvolvimento/revita/`
-2. **React Router**: Configurado com `basename="/desenvolvimento/revita"`
+1. **Base Path**: Configurado no `vite.config.ts` como `/`
+2. **React Router**: Configurado com `basename="/"`
 3. **Links**: Todos os links internos usam `Link` do React Router
 4. **HTAccess**: Configurado para SPA routing no Apache
 
@@ -21,12 +21,12 @@ npm run build
 ```
 
 O build será gerado na pasta `dist/` e deve ser enviado para:
-`/desenvolvimento/revita/` no servidor
+`/` no servidor (raiz)
 
 ### Estrutura de Arquivos no Servidor
 
 ```
-/desenvolvimento/revita/
+/
 ├── index.html
 ├── assets/
 │   ├── css/
@@ -111,8 +111,8 @@ src/
 
 ### Base Path
 O projeto está configurado para funcionar em subdiretório:
-- Vite: `base: '/desenvolvimento/revita/'`
-- React Router: `basename="/desenvolvimento/revita"`
+- Vite: `base: '/'`
+- React Router: `basename="/"`
 
 ### Roteamento SPA
 O arquivo `.htaccess` está configurado para:

@@ -15,7 +15,7 @@ function App() {
 }
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <BrowserRouter basename="/desenvolvimento/revita">
+  <BrowserRouter basename="/">
     <Header />
     <FloatingHeader />
     <App />
