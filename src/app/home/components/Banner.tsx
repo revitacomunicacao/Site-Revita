@@ -12,6 +12,7 @@ const slides = [
     title: "Marketing Digital para Clínicas Médicas",
     desc: "Transformamos Clínicas Médicas em referências no setor. Estratégias especializadas que aumentam a confiança dos pacientes e geram mais consultas qualificadas.",
     cta: "Fale com um especialista",
+    link: "https://api.whatsapp.com/send/?phone=5534996374463&text=Ol%C3%A1!%20Acessei%20o%20site%20da%20Revita%20e%20quero%20mais%20informa%C3%A7%C3%B5es.",
     background: backgroundVideo,
     image: modeloSelos,
   },
@@ -20,6 +21,7 @@ const slides = [
     title: "Marketing Digital para Clínicas Médicas",
     desc: "Transformamos Clínicas Médicas em referências no setor. Estratégias especializadas que aumentam a confiança dos pacientes e geram mais consultas qualificadas.",
     cta: "Fale com um especialista",
+    link: "https://api.whatsapp.com/send/?phone=5534996374463&text=Ol%C3%A1!%20Acessei%20o%20site%20da%20Revita%20e%20quero%20mais%20informa%C3%A7%C3%B5es.",
     background: video,
   },
   {
@@ -27,6 +29,7 @@ const slides = [
     title: "Soluções Digitais para Clínicas Médicas",
     desc: "Utilizamos tecnologia avançada e análise de dados para gerar crescimento sustentável e resultados mensuráveis para sua Clínica Médica.",
     cta: "Solicite um diagnóstico",
+    link: "https://api.whatsapp.com/send/?phone=5534996374463&text=Ol%C3%A1!%20Acessei%20o%20site%20da%20Revita%20e%20quero%20mais%20informa%C3%A7%C3%B5es.",
     background: video2,
   },
   {
@@ -34,6 +37,7 @@ const slides = [
     title: "Sua Clínica Médica em Primeiro Lugar",
     desc: "Transformamos Clínicas Médicas em marcas admiradas no setor, preferidas pelos pacientes e reconhecidas pela excelência. Mais que uma agência, somos parceiros do seu negócio.",
     cta: "Conheça nossos cases",
+    link: "/portfolio",
     background: video3,
   },
 ];
@@ -116,7 +120,12 @@ export const Banner = () => {
                    })}
                  </h1>
                 <p className="text-base sm:text-lg md:text-xl lg:text-xl text-white/80 max-w-2xl mx-auto lg:mx-0 animate-fade-in-left leading-relaxed">{slide.desc}</p>
-                <a href="https://api.whatsapp.com/send/?phone=5534996374463&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="mt-4 sm:mt-6 lg:mt-4 px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-[#FF9025] text-[#660042] font-bold text-base sm:text-lg shadow-lg hover:bg-[#fff] hover:text-[#FF9025] transition-all duration-300 animate-fade-in-up w-fit mx-auto lg:mx-0 inline-block">
+                <a 
+                  href={slide.link} 
+                  target={slide.link.startsWith('http') ? "_blank" : "_self"} 
+                  rel={slide.link.startsWith('http') ? "noopener noreferrer" : undefined}
+                  className="mt-4 sm:mt-6 lg:mt-4 px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-[#FF9025] text-[#660042] font-bold text-base sm:text-lg shadow-lg hover:bg-[#fff] hover:text-[#FF9025] transition-all duration-300 animate-fade-in-up w-fit mx-auto lg:mx-0 inline-block"
+                >
                   {slide.cta}
                 </a>
               </div>

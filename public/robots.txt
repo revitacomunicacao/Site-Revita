@@ -1,0 +1,63 @@
+# robots.txt para Revita Comunicação
+# https://revitacomunicacao.com.br
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://revitacomunicacao.com.br/sitemap.xml
+
+# Páginas principais permitidas
+Allow: /agencia
+Allow: /servicos
+Allow: /portfolio
+Allow: /blog
+Allow: /politicas-de-privacidade
+
+# Assets permitidos
+Allow: /assets/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.webp
+Allow: /*.ico
+Allow: /*.mp4
+Allow: /*.webm
+
+# Crawl delay (opcional - remove se não necessário)
+# Crawl-delay: 1
+
+# Diretórios que podem ser bloqueados (descomente se necessário)
+# Disallow: /admin/
+# Disallow: /wp-admin/
+# Disallow: /wp-content/uploads/
+# Disallow: /desenvolvimento/
+
+# Específico para bots do Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Específico para bots do Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Específico para bots do Facebook
+User-agent: facebookexternalhit
+Allow: /
+
+# Específico para bots do WhatsApp
+User-agent: WhatsApp
+Allow: /
+
+# Específico para bots do LinkedIn
+User-agent: LinkedInBot
+Allow: /
+
+# Host (opcional - usado apenas se houver múltiplos domínios)
+# Host: https://revitacomunicacao.com.br

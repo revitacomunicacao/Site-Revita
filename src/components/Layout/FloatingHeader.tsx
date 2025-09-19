@@ -192,7 +192,7 @@ export const FloatingHeader = () => {
                     <span className="text-sm">(34) 99637-4463</span>
                   </div>
                                            <div className="flex items-center gap-3 text-white">
-                           <a href="https://api.whatsapp.com/send/?phone=5534996374463&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200">
+                           <a href="https://api.whatsapp.com/send/?phone=5534996374463&text=Ol%C3%A1!%20Acessei%20o%20site%20da%20Revita%20e%20quero%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white hover:text-[#FF9025] transition-colors duration-200">
                              <FaWhatsapp className="text-[#FF9025] text-lg" />
                              <span className="text-sm">(34) 99637-4463</span>
                            </a>
@@ -213,7 +213,7 @@ export const FloatingHeader = () => {
                   <a href="https://www.linkedin.com/company/revita-comunicacao?originalSubdomain=br" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#FF9025] transition-colors duration-200">
                     <FaLinkedin className="text-2xl" />
                   </a>
-                                     <a href="https://api.whatsapp.com/send/?phone=5534996374463&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#FF9025] transition-colors duration-200">
+                                     <a href="https://api.whatsapp.com/send/?phone=5534996374463&text=Ol%C3%A1!%20Acessei%20o%20site%20da%20Revita%20e%20quero%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#FF9025] transition-colors duration-200">
                      <FaWhatsapp className="text-2xl" />
                    </a>
                 </div>
@@ -222,7 +222,7 @@ export const FloatingHeader = () => {
               {/* Botão CTA */}
               <div className="pt-4 border-t border-[#660042] pb-6">
                 <SheetClose asChild>
-                  <a href="https://api.whatsapp.com/send/?phone=5534996374463&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="group relative h-12 w-full rounded-full border-2 border-[#FF9025] bg-gradient-to-r from-[#FF9025] to-[#FF6B35] px-6 text-[#660042] hover:from-[#FF6B35] hover:to-[#FF9025] transition-all duration-300 flex items-center justify-center overflow-hidden cursor-pointer">
+                  <a href="https://api.whatsapp.com/send/?phone=5534996374463&text=Ol%C3%A1!%20Acessei%20o%20site%20da%20Revita%20e%20quero%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" className="group relative h-12 w-full rounded-full border-2 border-[#FF9025] bg-gradient-to-r from-[#FF9025] to-[#FF6B35] px-6 text-[#660042] hover:from-[#FF6B35] hover:to-[#FF9025] transition-all duration-300 flex items-center justify-center overflow-hidden cursor-pointer">
                     <span className="relative inline-flex items-center gap-2 h-full w-full">
                       <span className="transition duration-500 group-hover:-translate-y-[200%] group-hover:skew-y-12 flex items-center gap-2 w-full justify-center">
                         Fale Conosco

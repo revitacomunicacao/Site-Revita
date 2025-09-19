@@ -125,7 +125,7 @@ export default function PoliticasDePrivacidade() {
                 <p className="text-gray-300"><strong className="text-[#FF9025]">Revita Comunicação</strong></p>
                 <p className="text-gray-300">E-mail: contato@revitacomunicacao.com.br</p>
                 <p className="text-gray-300">Telefone: (34) 99637-4463</p>
-                <p className="text-gray-300">WhatsApp: <a href="https://api.whatsapp.com/send/?phone=5534996374463&text&type=phone_number&app_absent=0" className="text-[#FF9025] hover:text-[#FF6B35] transition-colors">(34) 99637-4463</a></p>
+                <p className="text-gray-300">WhatsApp: <a href="https://api.whatsapp.com/send/?phone=5534996374463&text=Ol%C3%A1!%20Acessei%20o%20site%20da%20Revita%20e%20quero%20mais%20informa%C3%A7%C3%B5es." className="text-[#FF9025] hover:text-[#FF6B35] transition-colors">(34) 99637-4463</a></p>
               </div>
             </section>
 

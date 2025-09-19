@@ -73,10 +73,15 @@ export const Institutional = () => {
             </AnimatedElement>
 
             <AnimatedElement animation="scale-in" delay={600}>
-              <button className="group px-8 py-4 bg-[#FF9025] text-[#660042] font-bold text-lg rounded-full hover:bg-white hover:text-[#FF9025] transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer">
+              <a 
+                href="https://api.whatsapp.com/send/?phone=5534996374463&text=Ol%C3%A1!%20Acessei%20o%20site%20da%20Revita%20e%20quero%20mais%20informa%C3%A7%C3%B5es." 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group px-8 py-4 bg-[#FF9025] text-[#660042] font-bold text-lg rounded-full hover:bg-white hover:text-[#FF9025] transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer"
+              >
                 Fale Conosco
                 <FaLocationArrow size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
+              </a>
             </AnimatedElement>
           </AnimatedElement>
 

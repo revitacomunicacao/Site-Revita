@@ -44,7 +44,7 @@ export const Footer = () => {
                 <a href="https://www.linkedin.com/company/revita-comunicacao?originalSubdomain=br" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 bg-[#660042] rounded-full flex items-center justify-center hover:bg-secondary transition-colors duration-300">
                   <FaLinkedin className="text-white text-sm sm:text-base" />
                 </a>
-                <a href="https://api.whatsapp.com/send/?phone=5534996374463&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 bg-[#660042] rounded-full flex items-center justify-center hover:bg-secondary transition-colors duration-300">
+                <a href="https://api.whatsapp.com/send/?phone=5534996374463&text=Ol%C3%A1!%20Acessei%20o%20site%20da%20Revita%20e%20quero%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 bg-[#660042] rounded-full flex items-center justify-center hover:bg-secondary transition-colors duration-300">
                   <FaWhatsapp className="text-white text-sm sm:text-base" />
                 </a>
               </div>
@@ -140,7 +140,7 @@ export const Footer = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <a href="https://api.whatsapp.com/send/?phone=5534996374463&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="flex flex-row gap-2">
+                  <a href="https://api.whatsapp.com/send/?phone=5534996374463&text=Ol%C3%A1!%20Acessei%20o%20site%20da%20Revita%20e%20quero%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" className="flex flex-row gap-2">
                     <Phone className="text-secondary mt-1 flex-shrink-0" size={16} />
                     <FaWhatsapp className="text-secondary mt-1 flex-shrink-0" size={16} />
                     <div>

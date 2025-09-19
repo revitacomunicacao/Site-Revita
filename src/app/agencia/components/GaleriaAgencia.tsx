@@ -104,7 +104,7 @@ export const GaleriaAgencia = () => {
 
         <AnimatedElement animation="slide-up" delay={700}>
           <div className="text-center mt-12">
-            <a href="https://api.whatsapp.com/send/?phone=5534996374463&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="mt-6 bg-[#FF9025] text-black font-semibold px-8 py-3 rounded-full hover:bg-[#FF9025]/90 transition-all duration-300 cursor-pointer inline-block">
+            <a href="https://api.whatsapp.com/send/?phone=5534996374463&text=Ol%C3%A1!%20Acessei%20o%20site%20da%20Revita%20e%20quero%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" className="mt-6 bg-[#FF9025] text-black font-semibold px-8 py-3 rounded-full hover:bg-[#FF9025]/90 transition-all duration-300 cursor-pointer inline-block">
               Agendar atendimento
             </a>
           </div>
