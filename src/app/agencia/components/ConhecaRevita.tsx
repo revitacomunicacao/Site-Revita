@@ -1,6 +1,6 @@
 import { AnimatedElement } from "@/components/AnimatedElement"
 import { Users, Calendar, Users as Collaborators } from "lucide-react"
-import rodrihopedro from "@/assets/rodrihopedro.png"
+import josianeRodrigo from "@/assets/Josiane_Rodrigo.png"
 
 export const ConhecaRevita = () => {
   return (
@@ -60,17 +60,16 @@ export const ConhecaRevita = () => {
               </div>
             </div>
 
-            {/* Foto do Rodrigo na direita */}
+            {/* Foto da Josiane e do Rodrigo na direita */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                
-                                  <img 
-                  src={rodrihopedro} 
-                  alt="Rodrigo Bindes" 
+                <img
+                  src={josianeRodrigo}
+                  alt="Josiane e Rodrigo"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute -bottom-4 -right-4 bg-[#FF9025] text-black px-3 py-1 rounded-full text-xs font-semibold">
-                  Rodrigo Nascimento
+                  Josiane e Rodrigo
                 </div>
               </div>
             </div>

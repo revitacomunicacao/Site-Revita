@@ -1,7 +1,12 @@
 import { Servico } from "./components/Servico"
-import foto1 from "@/assets/FeaturesBanner02.png"
-import foto2 from "@/assets/FeaturesBanner01.png"
-import foto3 from "@/assets/inteligencia-artificial.jpg"
+import fotoInteligenciaArtificial from "@/assets/solucoes/inteligencia-artificial.jpg"
+import fotoBranding from "@/assets/solucoes/branding.jpg"
+import fotoPublicidade from "@/assets/solucoes/publicidade.jpg"
+import fotoRedesSociais from "@/assets/solucoes/redes-sociais.jpg"
+import fotoSites from "@/assets/solucoes/site.jpg"
+import fotoTrafegoPago from "@/assets/solucoes/trafego-pago.jpg"
+import fotoSeo from "@/assets/solucoes/seo.jpg"
+import fotoConteudoInbound from "@/assets/solucoes/conteudo-e-inbound.jpg"
 import { PageHeader } from "@/components/Layout/PageHeader"
 import { useScrollToAnchor, scrollToAnchor } from "@/hooks/useScrollToAnchor"
 
@@ -28,7 +33,7 @@ export default function Servicos() {
         title={"Inteligência"}
         title2={"Artificial"}
         description={"Plataforma de atendimento via WhatsApp com inteligência artificial. Eficiência e produtividade para sua equipe."}
-        imagem={foto3}
+        imagem={fotoInteligenciaArtificial}
         badge={[
           { name: "Eficiência" },
           { name: "Atendimento" },
@@ -42,7 +47,7 @@ export default function Servicos() {
         title={"Branding"}
         title2={""}
         description={"Construção de identidade visual profissional para clínicas médicas, criando confiança e credibilidade junto aos pacientes."}
-        imagem={foto1}
+        imagem={fotoBranding}
         badge={[
           { name: "Identidade Visual" },
           { name: "Credibilidade" },
@@ -55,7 +60,7 @@ export default function Servicos() {
         title={"Publicidade"}
         title2={""}
         description={"Campanhas especializadas para o setor médico que conectam sua clínica aos pacientes certos, respeitando regulamentações."}
-        imagem={foto2}
+        imagem={fotoPublicidade}
         badge={[
           { name: "Campanhas Especializadas" },
           { name: "Segmentação" },
@@ -68,7 +73,7 @@ export default function Servicos() {
         title={"Redes"}
         title2={"Sociais"}
         description={"Gestão estratégica das redes sociais para clínicas, criando engajamento e autoridade médica de forma ética."}
-        imagem={foto1}
+        imagem={fotoRedesSociais}
         badge={[
           { name: "Gestão Estratégica" },
           { name: "Autoridade" },
@@ -81,7 +86,7 @@ export default function Servicos() {
         title={"Sites"}
         title2={""}
         description={"Criação de sites profissionais para clínicas médicas, otimizados para conversão e credibilidade no setor."}
-        imagem={foto2}
+        imagem={fotoSites}
         badge={[
           { name: "Sites Profissionais" },
           { name: "Credibilidade" },
@@ -94,7 +99,7 @@ export default function Servicos() {
         title={"Tráfego"}
         title2={"Pago"}
         description={"Gestão especializada de anúncios para clínicas médicas, focando em pacientes qualificados e ROI mensurável."}
-        imagem={foto1}
+        imagem={fotoTrafegoPago}
         badge={[
           { name: "Pacientes Qualificados" },
           { name: "ROI Mensurável" },
@@ -107,7 +112,7 @@ export default function Servicos() {
         title={"SEO"}
         title2={""}
         description={"Otimização para mecanismos de busca especializada em termos médicos, aumentando a visibilidade da sua clínica."}
-        imagem={foto2}
+        imagem={fotoSeo}
         badge={[
           { name: "SEO" },
           { name: "Visibilidade" },
@@ -120,7 +125,7 @@ export default function Servicos() {
         title={"Conteúdo"}
         title2={"e Inbound"}
         description={"Estratégias de inbound marketing para atrair, converter e fidelizar pacientes através de conteúdo de valor."}
-        imagem={foto2}
+        imagem={fotoConteudoInbound}
         badge={[
           { name: "Atração" },
           { name: "Conversão" },
